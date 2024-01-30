@@ -1,0 +1,1774 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="css/estil.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" integrity="sha512-Ic9xkERjyZ1xgJ5svx3y0u3xrvfT/uPkV99LBwe68xjy/mGtO+4eURHZBW2xW4SZbFrF1Tf090XqB+EVgXnVjw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" integrity="sha512-Ic9xkERjyZ1xgJ5svx3y0u3xrvfT/uPkV99LBwe68xjy/mGtO+4eURHZBW2xW4SZbFrF1Tf090XqB+EVgXnVjw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300&display=swap" rel="stylesheet">
+
+    <link rel="icon" type="image/png" href="img/favi.png">
+</head>
+
+<body>
+    <div class="pantCarga">
+        <img id="carga" src="img/Carga.gif" >
+    </div>
+    <!-- OJO, os he modificado estas lineas, las id's deben ser únicas, no se deben repetir -->
+    <div class="menuCapitulos">
+        <div id="cruz"></div>
+        <h2> ÍNDEX </h2>
+        <p class="opcMenu" onclick="mostrar(1);"><strong> Capítol 1. Per que jo?</strong></p>
+        <p class="opcMenu" onclick="mostrar(2);"><strong> Capítol 2. De mal a pitjor</strong></p>
+        <p class="opcMenu" onclick="mostrar(3);"><strong> Capítol 3. Excursió al zoo</strong></p>
+        <p class="opcMenu" onclick="mostrar(4);"><strong> Capítol 4. M’encanta l’ordre alfabètic</strong></p>
+        <p class="opcMenu" onclick="mostrar(5);"><strong> Capítol 5. El grill</strong></p>
+        <p class="opcMenu" onclick="mostrar(6);"><strong> Capítol 6. El cargo</strong></p>
+        <p class="opcMenu" onclick="mostrar(7);"><strong> Capítol 7. El pingüí emperador</strong></p>
+        <p class="opcMenu" onclick="mostrar(8);"><strong> Capítol 8. Pregadéu</strong></p>
+        <p class="opcMenu" onclick="mostrar(9);"><strong> Capítol 9. El paó</strong></p>
+        <p class="opcMenu" onclick="mostrar(10);"><strong> Capítol 10. El gos</strong></p>
+        <p class="opcMenu" onclick="mostrar(11);"><strong> Capítol 11. L’hipopòtam</strong></p>
+        <p class="opcMenu" onclick="mostrar(12);"><strong> Capítol 12. El cavallet de mar</strong></p>
+        <p class="opcMenu" onclick="mostrar(13);"><strong> Capítol 13. El dofí</strong></p>
+        <p class="opcMenu" onclick="mostrar(14);"><strong> Capítol 14. El cérvol</strong></p>
+        <p class="opcMenu" onclick="mostrar(15);"><strong> Capítol 15. L’au del paradís</strong></p>
+
+    </div>
+
+    <div class="ajustes">
+        <!-- -->
+        <div id="cruz2"></div>
+        <h2> AJUSTAMENTS </h2>
+        <br>
+
+
+
+
+        <p class="titulo"><strong>Modo de color</strong></p>
+        <div id="ClaroOscuro" onclick="modo_Oscuro()" class="ClaroOscuro">
+            <div class="bloqueApartadosAjustes">
+                <div class="blanco"></div>
+                <img class="imgClaroOscuro" id="IMGclaroActivado" src="img/claroActivado.svg">
+                <div class="negre"></div>
+            </div>
+        </div>
+
+
+        <br>
+        <p class="titulo"><strong>Estil de lletra</strong></p>
+        <div id="EstiloTipo" onclick="Estilo_Tipo()" class="EstiloTipo">
+            <div class="bloqueApartadosAjustes">
+
+
+
+                <div id="tipo1">
+
+                    <p id="letra1">Aa </p>
+                </div>
+
+
+                <img class="imgClaroOscuro" id="IMGestiloActivado" src="img/estiloActivado.svg">
+
+
+
+
+
+                <p id="letra2">Aa </p>
+
+            </div>
+
+
+        </div>
+
+
+        <p class="titulo"><strong>Mida de lletra</strong></p>
+        <div id="MedidaTipo" onclick="Medida_Tipo()" class="MedidaTipo">
+            <div class="bloqueApartadosAjustes">
+
+                <p id="mida1">Aa</p>
+
+                <img class="imgClaroOscuro" id="IMGpequeActivado" src="img/pequeActivado.svg">
+
+
+
+
+
+
+                <p id="mida2">Aa</p>
+            </div>
+        </div>
+
+
+        <div id="tutorial">
+
+            <div id="tutorialBoton" onclick="tutorial_Boton()" class="tutorialBoton">
+                <img class="imgtutorial" id="imgtutorial" src="img/tutorialAmarillo.svg">
+            </div>
+        </div>
+    </div>
+    <!--  -->
+
+
+    <div class="barraSuperior">
+        <img id="logoCora" onclick="mostrar(1)" src="img/A.gif">
+        <div class="ajustesMenu">
+            <img id="ajustes" src="img/ajustes.png"> <!-- he cambiado la id a "ajustes" -->
+            <img id="menu" src="img/menu.png"> <!-- he cambiado la id a "menu" -->
+        </div>
+    </div>
+    <!-- Hasta aquí -->
+
+
+    <img id="fondoBarra" src="img/fondoBarra2.png">
+    <!--  <img id="degradadoBarra" src="img/degradadoBarra.png">
+         <div class="degradadoSuperiror"> </div>-->
+
+
+    <section id="palabrasDestacadas" onclick="amagarDestacat()">
+        <div id="destacat" class="recuadroDestacada">
+            <img id="corazon" src="img/corazon.png">
+            <img id="corazo2" src="img/corazon.png">
+            <img id="corazo3" src="img/corazon.png">
+            <img id="corazo4" src="img/corazon.png">
+
+            <div class="cruz">
+                <img id="cruzDestacada" src="img/cruzDestacada.png">
+            </div>
+            <div class="claseBlancoDestacada">
+                <h2 id="titolDestacat">Pigmeu</h2>
+                <p id="textDestacat">Tribu de l’Àfrica que es caracteritza
+                    <br>per ser d’estatura molt baixa.
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+    <section id="capitols">
+
+        <article class="capitols" id="capitol1">
+
+
+            <section id="pantInici">
+
+
+                <img id="cB" src="img/coraBlanco.png">
+                <img id="cB2" src="img/coraBlanco2.png">
+                <img id="cB3" src="img/coraBlanc03.png">
+
+
+                <div class="tituloAnimalades">
+                    <div class="Animalades">
+                        <h1 id="Animalades">Animalades
+                            <br><span style="font-size: 55%;">Judit Robert</span>
+                        </h1>
+                        <p>Versió de Susana Giner i Teresa Mateu <br>il·lustracions de Xavier Huguet </p>
+                    </div>
+                    <div class="bloqueAnimaladsLogo">
+
+                        <div class="logos">
+
+                        </div>
+
+                        <div class="scroll" id="elementoScroll">
+                            <div class="imagenClickeable"></div>
+                        </div>
+                        <div class="logos">
+                            <img id="diputacio" src="img/diputacio.svg">
+                            <img id="faro" src="img/faro.svg">
+                            <img id="LF" src="img/LF.svg">
+                        </div>
+                    </div>
+                    <img id="fondoo" src="img/olaGranate.png">
+                    <div class="nen">
+                        <img id="nenInici" src="img/ninoContento2.gif">
+
+                    </div>
+                </div>
+            </section>
+
+
+
+
+
+
+
+
+
+            <div class="c1scroll">
+
+                <div class="column-row">
+                    <div class="parrafos">
+                        <h2><span style="font-size: 70%;">Capítol 1.</span> Per què jo?</h2>
+
+
+
+
+
+
+
+
+                        <p>Fer-se gran és un rotllo. Un rotllo de veritat.
+                            <br>Quan ets un nen tothom t’ajuda.
+                            <br>Si no fas bé les coses no passa res.
+                            <br>Però quan et fas gran, tot canvia.
+                        </p>
+
+                        <p>Vas a l’institut, canvies d’amics, <br>canvies de talla de pantalons, de sabates...
+                            <br>La cara se t’omple de grans <br>i et surten pèls a llocs on no te’ls esperaves.
+                        </p>
+
+                        <p>Però sobretot canvies per dins.
+                            <br>Et costa saber qui ets i què vols <br>i tot ho veus complicat.
+                        </p>
+
+                        <p>I a sobre, comences a fixar-te en les noies.
+                            <br>Les noies són unes persones a qui tampoc no entens.
+                            <br>Tenen cara d’angelets, però només saben riure’s dels altres <br>i fer-te sentir vergonya.
+                            <br>Així que el teu món, de cop i volta, es complica.
+                        </p>
+
+                        <p>Fer-se gran és un rotllo!</p>
+                    </div>
+
+
+                    <img id="imgCapitols" src="img/c1-(1).png" alt="el Pau té una expressió trista i la seva cara té Canyelles">
+
+                </div>
+
+
+
+                <div class="column-row">
+                    <div class="parrafos">
+
+                        <p>—Necessites alguna cosa? —em pregunta la mare.</p>
+
+
+                        <p>—Si, un mòbil nou. Aquest és una porqueria! —li contesto.</p>
+
+                        <p>—No siguis ximple. Surto a comprar, vols alguna cosa? <br>—torna a preguntar-me.</p>
+
+                        <p>—Nooooooo! —li dic.</p>
+
+                        <p>Aquesta és la meva mare: una pesada.
+                            <br>Ho sap tot.
+                            <br>Té resposta per a cada pregunta.
+                            <br>I si no la sap, se l’inventa.
+                            <br>No sé què li va veure el meu pare per casar-s’hi!
+                        </p>
+                    </div>
+
+                    <img id="imgCapitols" src="img/c1-(2).png" alt="La Mare de Pau té el cabell i els llavis vermells.">
+                </div>
+                <div class="column-row">
+                    <div class="parrafos">
+
+                        <p>Al meu pare només li agraden dues coses: <br>els pits de les dones i els esports, sobretot el futbol.</p>
+
+
+                        <p>El pare i jo tenim una relació difícil <br>perquè no m’interessen les noies ni els esports.
+                            <br>Les nostres converses són curtes.
+                        </p>
+
+                        <p>Ell em pregunta per què no jugo a futbol <br>i jo li dic: perquè no m’agrada.
+                            <br>Acabem discutint i marxo a la meva habitació, <br>l’únic lloc on em trobo a gust.
+                            <br>Allà miro les sèries de televisió i faig les meves coses.
+                        </p>
+                    </div>
+
+                    <img id="imgCapitols" src="img/c1-(3).png" alt="El pare de Pau aquesta ficat al llit en el sofà amb el seu gat veient un partit de futbol.">
+                </div>
+                <div class="column-row">
+                    <div class="parrafos">
+
+                        <p>—Abaixa el volum! Estic estudiant! –crida la meva germana.</p>
+
+                        <p>—Calla! Deixa’m! —li contesto jo.</p>
+
+                        <p>—Hauries d’estudiar! —em diu.</p>
+
+                        <p>La meva germana és la senyoreta perfecta.
+                            <br>Tot ho fa bé: recull l’habitació, treu bones notes, fa esport... <br>i sempre somriu.
+                        </p>
+
+                        <p>Jo me la miro i penso «sembla ximple amb aquesta rialla».
+                            <br>Jo només tinc ganes de destruir el món!
+                            <br>Fer-se gran és un rotllo.
+                        </p>
+                    </div>
+
+                    <img id="imgCapitols" src="img/c1-(4).png" alt="La germana de Pau aquesta asseguda en el seu escriptori estudiant.">
+                </div>
+
+
+                <div class="botonsCapitols">
+                    <div class="botoCapRoculto">
+                        <h3 id="flexa">←</h3>
+                        <h3>Anterior</h3>
+                    </div>
+                    <div class="botoCapR" onclick="mostrar(2)">
+                        <h3>Capítol 2 </h3>
+                        <h3 id="flexa">→</h3>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <!--__________________________________________________________________________________-->
+        <article class="capitols" id="capitol2">
+
+            <div class="c1">
+                <div class="column-row">
+                    <div class="parrafos">
+                        <h2><span style="font-size: 70%;">Capítol 2.</span> Del mal a pitjor</h2>
+
+
+                        <p>Els primers dies a l'institut són complicats.
+                            <br>Em sento com un <strong id="destacadahover" onclick="destacar(0)">pigmeu</strong> ple de grans.
+                            <br>Tothom em mira pel passadís.
+                            <br>Quan s'acostumen a veure'm, em vaig tranquil·litzant.
+                        </p>
+                        <p>Penso que hauria de fer amics.
+                            <br>Però ho tinc difícil, això sembla la selva.
+                        </p>
+                    </div>
+                    <img id="imgCapitols" src="img/cap-2-1.png" alt="El Pau aquesta caminant pels passadissos del seu institut.">
+                </div>
+
+                <div class="column-row">
+                    <div class="parrafos">
+                        <p>—Soler, surti a la pissarra-la mestra de matemàtiques, em crida.</p>
+                        <p>—Vinga!Espavila!-diu el noi assegut darrere meu.</p>
+                        <p>—Com resoldries el problema de la pissarra? -em pregunta <br>la professora.</p>
+                        <p>—Jo aplicaria el <strong id="destacadahover" onclick="destacar(1)">mínim comú múltiple</strong>-responc.</p>
+                        <p>Començo a resoldre el problema a la pissarra.
+                            <br>Mentrestant, la mestra va explicant la lliçó.
+                            <br>En acabar el problema, es gira cap a mi i em diu:
+                        </p>
+                        <p>—Molt bé, Soler. Perfecte. Pots tornar al teu lloc.</p>
+                    </div>
+                    <img id="imgCapitols" src="img/c2-(2).png" alt="El Pau aquesta resolent un exercici de matemàtiques en la pissarra enfront dels seus
+companys i professora.">
+                </div>
+
+                <div class="column-row">
+                    <div class="parrafos">
+                        <p>—Vaja, vaja. Així que el pigmeu entén les mates... Millor!
+                            <br>Ja sé de qui copiaré. Si et queixes et trenco les cames <br>—m’amenaça el noi de darrere meu, el xulet de la classe.
+                        </p>
+                        <p>Genial! Això és l’infern i encara queden quatre anys <br>per graduar-me.
+                            <br>Els ulls se m’omplen de llàgrimes i premo els punys.
+                            <br>Tinc ganes de plorar de ràbia!
+                        </p>
+                        <p>—Ei, estàs bé?—em pregunta algú.</p>
+                        <p>Em giro de costat, <br>i veig la noia més meravellosa del món.
+                        </p>
+                    </div>
+                    <img id="imgCapitols" src="img/c2-(3).png" alt="Una noia amb cabell ros i llavis rosats.">
+                </div>
+
+                <div class="column-row">
+                    <div class="parrafos">
+                        <p>—Si—li responc, mentre la miro com un ximple</p>
+                        <p>—Ei, què mires? –em diu el xulet del darrere.</p>
+                        <p>—Res —li contesto.</p>
+                        <p>El meu cor batega accelerat.
+                            <br>Potser l’institut no serà tan horrible com pensava.
+                            <br>Ella seu al meu costat <br>i jo faré tot el possible per conquerir-la.
+                        </p>
+                    </div>
+                    <img id="imgCapitols" src="img/c2-(4).png" alt="El Pau somrient amb cors al voltant seu.">
+                </div>
+                <div class="botonsCapitols">
+                    <div class="botoCapL" onclick="mostrar(1)">
+                        <h3 id="flexa">←</h3>
+                        <h3>Capítol 1</h3>
+                    </div>
+                    <div class="botoCapR" onclick="mostrar(3)">
+                        <h3>Capítol 3</h3>
+                        <h3 id="flexa">→</h3>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <!--__________________________________________________________________________________-->
+        <article class="capitols" id="capitol3">
+            <div class="c1">
+                <div class="column-row">
+                    <div class="parrafos">
+                        <h2><span style="font-size: 70%;">Capítol 3.</span> Excursió al zoo</h2>
+
+                        <p>Aquest primer trimestre anirem d’excursió al zoo.
+                            <br>En Toni, el professor de ciències naturals, vol motivar-nos.
+                            <br>Creu que així aprendrem més coses sobre els animals.
+                            <br>Però jo penso que no és bona idea.
+                            <br>Ja no som unes criatures.
+                        </p>
+                        <p>Avui és l’últim dia per portar l’autorització signada pels pares, <br>i jo me l’he deixat a casa. Sóc un desastre!
+                        </p>
+                        <p>—Soler, no ve a l’excursió? —em pregunta el professor.</p>
+                        <p>—No vol venir al zoo perquè té por <br>que el confonguin amb un mico!—diu el xulet ben alt <br>perquè el senti tota la classe.</p>
+                        <p>Quina gràcia! Tothom riu.
+                            <br>Jo em poso vermell com un tomàquet.
+                            <br>Miro a la meva dreta <br>i la veig, a ella, mirant-me amb compassió.
+                        </p>
+                        <p>Pregunto al professor si puc trucar a casa <br>i em diu que sí.
+                        </p>
+
+                    </div>
+                    <img id="noimgCapitols">
+                </div>
+                <div class="column-row">
+                    <div class="parrafos">
+                        <p>Surto al passadís.
+                            <br>Oh no! El meu mòbil no té bateria.
+                            <br>Què puc fer?
+                            <br>Penso de pressa i corro cap a secretaria.
+                        </p>
+                        <p>—Bon dia! Puc trucar a casa? <br>—pregunto a la secretària de l’institut.
+                        </p>
+                        <p>—No tens mòbil? –em pregunta ella amb mala cara.</p>
+                        <p>—Se li ha acabat la bateria —dic.</p>
+                        <p>—És clar! Tot el dia amb el WhatsApp.
+                            <br>No, no pots trucar. Són les normes.
+                        </p>
+                        <p>Estic a punt de plorar.
+                            <br>Quan deixaré de ser un nen?
+                        </p>
+                        <p>La secretària em mira, i em diu:
+                            <br>—D’acord. Truca però sigues breu.
+                        </p>
+                        <p>Avui he estat de sort.
+                            <br>Jo encara no ho sé, <br>però la visita al zoo canviarà la meva vida.
+                        </p>
+                    </div>
+                    <img id="imgCapitols" src="img/c3-(1).png" alt="El Pau està esperant que la secretària acabi de parlar per telèfon.">
+                </div>
+                <div class="botonsCapitols">
+                    <div class="botoCapL" onclick="mostrar(2)">
+                        <h3 id="flexa">←</h3>
+                        <h3>Capítol 2</h3>
+                    </div>
+                    <div class="botoCapR" onclick="mostrar(4)">
+                        <h3>Capítol 4</h3>
+                        <h3 id="flexa">→</h3>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <!--__________________________________________________________________________________-->
+        <article class="capitols" id="capitol4">
+            <div class="c1">
+                <div class="column-row">
+                    <div class="parrafos">
+                        <h2><span style="font-size: 70%;">Capítol 4.</span> M'encanta l'ordre alfabètic</h2>
+
+                        <p>Arriba el dia de l’excursió al zoo.
+                            <br>Tota la classe està a punt per pujar a l’autobús.
+                            <br>Tothom sap al costat de qui s’asseurà durant el viatge.
+                            <br>Tots menys jo, perquè encara no he fet cap amic.
+                        </p>
+                        <p>En Toni, el professor de ciències, m’ajuda.</p>
+                        <p>—Les excursions també serveixen per relacionar-vos <br>entre vosaltres. Vull que segueu per ordre alfabètic—diu.
+                        </p>
+                        <p>Em mira, em somriu i em pica l’ullet</p>
+                    </div>
+                    <img id="imgCapitols" src="img/c4-(1).png" alt="la classe espera en fila per a pujar a l'autobús.">
+                </div>
+                <div class="column-row">
+                    <div class="parrafos">
+                        <p>El professor crida els companys per ordre de llista, <br>i em toca seure al seu costat!
+                            <br>Al costat de la noia més guapa de la classe: la Carla Sants.
+                        </p>
+                        <p>—Seiem junts—em diu ella.</p>
+                        <p>—Si—contesto jo.</p>
+                    </div>
+                    <img id="imgCapitols" src="img/c4-(2).png" alt="El Pau es seu al costat de Carla en l'autobús.">
+                </div>
+                <div class="column-row">
+                    <div class="parrafos">
+                        <p>No sé què dir-li ni com començar una conversa.
+                            <br>Ella es posa els auriculars per escoltar música.
+                            <br>El viatge es fa molt curt.
+                        </p>
+                        <p>En baixar de l’autobús, la Carla em diu: </p>
+                        <p>—Fins ara Pau, passa-ho bé!</p>
+                        <p>Jo, callat, alço la mà.</p>
+                        <p>De sobte, algú m’agafa pel clatell.</p>
+                    </div>
+                    <img id="imgCapitols" src="img/c4-(3).png" alt="Un noi de cabell vermell agafa al Pau pel coll.">
+                </div>
+                <div class="column-row">
+                    <div class="parrafos">
+                        <p>—Ei, pringat, a la tornada em canvies el lloc.
+                            <br>Jo vull seure amb la Carla. M’agrada i vull que sigui la meva xicota.
+                            <br>Ho has entès?—em diu la veu.
+                        </p>
+                        <p>Em giro i és en Quique Martínez, el xulet de la classe.
+                            <br>Jo dic sí amb el cap.
+                        </p>
+                        <p>—Perfecte. Encara em cauràs bé pringat!—em contesta.</p>
+                        <p>M’acosto al professor.
+                            <br>Vull escoltar les seves explicacions sobre els animals.
+                            <br>En sap molt.
+                        </p>
+                    </div>
+                    <img id="noimgCapitols">
+                </div>
+                <div class="botonsCapitols">
+                    <div class="botoCapL" onclick="mostrar(3)">
+                        <h3 id="flexa">←</h3>
+                        <h3>Capítol 3</h3>
+                    </div>
+                    <div class="botoCapR" onclick="mostrar(5)">
+                        <h3>Capítol 5</h3>
+                        <h3 id="flexa">→</h3>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <!--__________________________________________________________________________________-->
+        <article class="capitols" id="capitol5">
+            <div class="c1">
+                <div class="column-row">
+                    <div class="parrafos">
+                        <h2><span style="font-size: 70%;">Capítol 5.</span> El grill</h2>
+
+                        <p>El professor de ciències explica que tots els animals <br>tenen diferents maneres de trobar parella.
+                            <br>Jo prenc apunts al meu quadern.
+                        </p>
+                        <p>«Potser alguna d’aquestes tècniques <br>em servirà per conquerir la Carla», penso.
+                        </p>
+                        <p>—Els grills utilitzen la veu.
+                            <br>Els més forts canten i competeixen entre ells.
+                            <br>També obliguen els més dèbils a deixar de cantar<br>—explica el professor.
+                        </p>
+                    </div>
+                    <img id="imgCapitols" src="img/c5-(1).png" alt="Una mà dibuixant amb llapis un grill sobre un full de paper.">
+                </div>
+                <div class="column-row">
+                    <div class="parrafos">
+                        <p>És molt interessant, <br>però no em veig a mi mateix cantant com un grill.
+                        </p>
+                        <p>El professor continua explicant:
+                            <br>—Però els grills més febles tenen una altra tècnica: <br>produeixen una olor molt forta per atreure les femelles.
+                        </p>
+                        <p>Interessant! No cantaré, però em puc perfumar</p>
+                        <p>Aquella mateixa tarda, després de l’excursió, <br>m’apropo fins a una perfumeria.
+                        </p>
+                        <p>—Bona tarda! M’agradaria comprar un perfum<br>—li dic a la dependenta.
+                        </p>
+                        <p>—És per a tu? –em pregunta.</p>
+                        <p>—Si.</p>
+                        <p>—Ah! Llavors anem a la secció de colònies per a joves
+                            <br>—diu la noia.
+                        </p>
+
+
+                        <p>—No, No! Jo vull un perfum potent <br>que es pugui olorar des de ben lluny.
+                        </p>
+                    </div>
+                    <img id="noimgCapitols">
+                </div>
+
+                <div class="column-row">
+                    <div class="parrafos">
+                        <p>La noia em mira amb cara d’espant i em pregunta:
+                        </p>
+                        <p>—Estàs segur? </p>
+                        <p>—Si –li contesto.</p>
+                        <p>Per fi, em va dona un perfum que es diu Alain Dupont.
+                            <br>Ja pot ser bo perquè és caríssim!
+                        </p>
+                    </div>
+                    <img id="imgCapitols" src="img/c5-(2).png" alt="El Pau parlant amb una dependenta en una botiga de perfums.">
+                </div>
+                <div class="column-row">
+                    <div class="parrafos">
+                        <p>L’endemà em perfumo i me’n vaig a l’institut tot content.
+                            <br>Els meus companys tenen atacs de tos quan passen pel meu costat.
+                        </p>
+                        <p>—Què és aquesta fortor?—pregunta el xulet—
+                            <br>Has caigut dins d’un cubell de perfum? Quina pudor!
+                        </p>
+                        <p>Llavors entra la professora.</p>
+                    </div>
+                    <img id="imgCapitols" src="img/c5-(3).png" alt="Els companys de classe es queixen d'una mala olor mentre el Pau passa pel seu costat.">
+                </div>
+                <div class="column-row">
+                    <div class="parrafos">
+                        <p>—Què és aquesta olor tan forta? Mare meva!
+                            <br>Qui s’hagi posat aquesta colònia que surti, <br>que vagi al lavabo i es renti!
+                            <br>I obriu les finestres!—ordena la professora.
+                        </p>
+                        <p>M’aixeco de la cadira amb el cap abaixat.
+                            <br>Quina vergonya!
+                            <br>El perfum no ha servit perquè la Carla es fixi en mi.
+                        </p>
+
+                    </div>
+                    <img id="noimgCapitols">
+                </div>
+                <div class="botonsCapitols">
+                    <div class="botoCapL" onclick="mostrar(4)">
+                        <h3 id="flexa">←</h3>
+                        <h3>Capítol 4</h3>
+                    </div>
+                    <div class="botoCapR" onclick="mostrar(6)">
+                        <h3>Capítol 6</h3>
+                        <h3 id="flexa">→</h3>
+                    </div>
+                </div>
+            </div>
+
+        </article>
+        <!--__________________________________________________________________________________-->
+        <article class="capitols" id="capitol6">
+            <div class="c1">
+                <div class="column-row">
+                    <div class="parrafos">
+                        <h2><span style="font-size: 70%;">Capítol 6.</span> El cargol</h2>
+
+                        <p>Durant uns dies tota la classe fa pudor del meu perfum.
+                            <br>També casa meva, la meva roba, el sofà...
+                            <br>Quina maledicció! Tot em fa pensar en el meu primer fracàs.
+                        </p>
+                        <p>Els meus pares em castiguen <br>sense sortir de casa durant tot el cap de setmana.
+                            <br>Aprofito per mirar la televisió.
+                            <br>Com que no hi ha res més interessant, <br>miro un documental sobre els cargols.
+                            <br>Potser descobriré una nova tècnica per enamorar la Carla.
+                        </p>
+                        <p>Els cargols són sords i per això no canten ni fan cap so per tenir parella.
+                            <br>S’estimen de forma llarga i lenta.
+                        </p>
+                        <p>Els cargols són hermafrodites, <br>és a dir, tenen dos sexes.
+                            <br>Però un cargol necessita un altre cargol per ser fecundat, <br>i per això freguen els seus cossos durant hores.
+
+                        </p>
+                    </div>
+                    <img id="noimgCapitols">
+                </div>
+                <div class="column-row">
+                    <div class="parrafos">
+
+                        <p>Per evitar que la parella es fixi en un altre cargol <br>o es distregui, li claven un dard de l’amor.
+                            <br>Aquest dard fertilitza la parella <br>i fa que se n’enamori per sempre.
+                            <br>Funciona com una poció amorosa.
+                            <br>I jo que pensava que els cargols eren animals pacífics!
+                        </p>
+                    </div>
+                    <img id="imgCapitols" src="img/c6-(1).png" alt="El Pau aquesta en el sofà veient la televisió sobre dos caragols.">
+                </div>
+                <div class="column-row">
+                    <div class="parrafos">
+                        <p>Ja ho tic. Aplicaré la tècnica dels cargols <br>per enamorar la Carla: li llançaré un dard!
+                        </p>
+                        <p>Les tardes sortint d’escola <br>vaig a jugar a dards al bar del costat de casa.
+                            <br>He de perfeccionar la tècnica.
+                            <br>No puc tirar-li un dard a l’ull!
+                        </p>
+                        <p>El dijous a la tarda, un cop acabada la partida, <br>agafo un dard i el guardo a la butxaca dels pantalons.
+                        </p>
+                        <p>Ho tinc tot pensat: li llençaré el dard a l’hora del pati.
+                            <br>Hi haurà molta gent i ningú s’adonarà de qui ha estat.
+                            <br>Només ho sabrà ella, que s’enamorarà bojament de mi.
+                            <br>Fins i tot li escric una nota
+                            <br>on li demano que sigui la meva xicota.
+                        </p>
+                        <p>Riiiing!!! Sona el timbre.</p>
+                        <p>Enganxo la nota al dard <br>i busco amb la mirada on és la Carla.
+                            <br>Està al costat de la reixa, com cada dia.
+                            <br>Apunto al cul, que és la diana més bonica del món.
+                        </p>
+                    </div>
+                    <img id="imgCapitols" src="img/c6-(2).png" alt="Un dard li dona a la Carla en el cul mentre el Pau mira sorprès.">
+                </div>
+                <div class="column-row">
+                    <div class="parrafos">
+                        <p>—Aaaaaiiiiii</p>
+                    </div>
+                    <img id="noimgCapitols">
+                </div>
+                <div class="column-row">
+                    <div class="parrafos">
+                        <p>La Carla cau a terra, cridant i plorant.
+                            <br>Les amigues la consolen.
+                            <br>Els professors corren a agafar-la <br>i la porten cap a dins.
+                        </p>
+                        <p>Jo, quiet, m’ho miro i no sé què fer.
+                            <br>Li posen una injecció: l’anti-tetànica.
+                            <br>I s’està una setmana sense venir a l’institut.
+                            <br>El dard de l’amor dels cargols <br>no ha estat una bona idea.
+                            <br>Quan estimes algú no li has de fer mal.
+                        </p>
+                        <p>Em pregunto si va tenir temps de llegir la nota.
+                            <br>Em sento com un cargol fracassat.
+                        </p>
+                    </div>
+                    <img id="imgCapitols" src="img/c6-(3).png" alt="Un full de paper arrugat al terra.">
+                </div>
+
+                <div class="botonsCapitols">
+                    <div class="botoCapL" onclick="mostrar(5)">
+                        <h3 id="flexa">←</h3>
+                        <h3>Capítol 5</h3>
+                    </div>
+                    <div class="botoCapR" onclick="mostrar(7)">
+                        <h3>Capítol 7</h3>
+                        <h3 id="flexa">→</h3>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <!--__________________________________________________________________________________-->
+        <article class="capitols" id="capitol7">
+            <div class="c1">
+                <div class="column-row">
+                    <div class="parrafos">
+                        <h2><span style="font-size: 70%;">Capítol 7.</span> El pingüí emperador</h2>
+
+                        <p>Aquella setmana estic molt desanimat.
+                            <br>Em sento culpable, he llençat un dard al cul de la Carla!
+                            <br>Com he estat tan ruc?
+                        </p>
+                        <p>Les coses a casa tampoc van massa bé.
+                            <br>Han seleccionat la meva germana <br>per a un campionat de patinatge.
+                        </p>
+                        <p>—Felicitats germaneta!—li dic sense ganes.</p>
+                        <p>—L’esport és bo. L’esforç sempre té recompensa.
+                            <br>Fixa’t en la teva germana!–em diu el meu pare–.
+                            <br>Però tu com que no practiques cap esport, <br>no saps què significa això!
+                        </p>
+                        <p>Que simpàtic el meu pare! Quina gràcia!
+                            <br>Per què no respecta els meus gustos?
+                            <br>A mi no m’agraden els esports.
+                            <br>Jo no lluito per aconseguir una medalla, <br>lluito per aconseguir un cor!
+                            <br>Vull aconseguir l’amor de la Carla!
+                            <br>No hi ha cap competició més gran que aquesta.
+                        </p>
+                    </div>
+                    <img id="noimgCapitols">
+                </div>
+                <div class="column-row">
+                    <div class="parrafos">
+
+                        <p>Em tanco a la meva habitació.
+                            <br>Sobre l’escriptori hi ha els apunts de ciències naturals.
+                            <br>Obro la llibreta per la pàgina del pingüí emperador.
+                        </p>
+                        <p>El pingüí és un romàntic.
+                            <br>Té la mateixa parella tota la vida.
+                            <br>Quan un pingüí mascle s’enamora d’un pingüí femella, <br>busca una pedra i la col·loca davant la femella.
+                            <br>Si ella l’agafa, significa que està d’acord en festejar-lo.
+                            <br>Llavors el mascle infla el pit i comença a cridar.
+                            <br>La femella fa el mateix.
+                        </p>
+                    </div>
+                    <img id="imgCapitols" src="img/c7-(1).png" alt="Un pingüí mascle mirant cap amunt i un pingüí femella mirant a una pedra en el sòl.">
+                </div>
+                <div class="column-row">
+                    <div class="parrafos">
+                        <p>Es passen hores cridant per recordar la veu de l’altre <br>i així poder-se trobar dins el grup entre milers de pingüins.
+                        </p>
+                        <p>«És per això que els nuvis regalen un diamant <br>a les seves promeses?», em pregunto.
+                        </p>
+                        <p>Un diamant és molt car.
+                            <br>Jo no puc comprar-li cap diamant, <br>però puc regalar-li una pedra especial.
+                            <br>Aniré a la platja a buscar una pedra bonica.
+                        </p>
+                    </div>
+                    <img id="imgCapitols" src="img/c7-(2).png" alt="El Pau caminant per la platja mirant el terra concentrat.">
+                </div>
+                <div class="column-row">
+                    <div class="parrafos">
+                        <p>Dilluns al matí, la Carla torna a classe.
+                            <br>Els companys li pregunten com es troba, <br>i ella els contesta amb un somriure:
+                        </p>
+                        <p>—Millor, gràcies.</p>
+                        <p>És tan guapa!</p>
+                        <p>En acabar la classe de matemàtiques, <br>tothom surt al pati.
+                            <br>Jo aprofito per deixar la pedra a la seva taula.
+                        </p>
+                    </div>
+                    <img id="imgCapitols" src="img/c7-(3).png" alt="El Pau deixa una pedra sobre la taula de la Carla en classe.">
+                </div>
+                <div class="column-row">
+                    <div class="parrafos">
+                        <p>Quan tornem del pati, la pedra no hi és!</p>
+                        <p>—Ei tu! Demà a l’examen de mates fes millor lletra <br>que si no no puc copiar!—em diu el xulet.
+                        </p>
+                        <p>Em giro.
+                            <br>En Quique té la pedra i se la passa d’una mà a l’altra.
+                        </p>
+                        <p>—Silenci—diu la professora d’història.</p>
+                        <p>—Professora, disculpi. És que en Pau m’ha llençat una pedra
+                            <br>—menteix en Quique.
+                        </p>
+                    </div>
+                    <img id="imgCapitols" src="img/c7(4).png" alt="El noi de Quique sosté la roca del Pau a la mà mentre ho mira enfadat.">
+                </div>
+                <div class="column-row">
+                    <div class="parrafos">
+                        <p>Em quedo tan sorprès, que no sé què dir ni com defensar-me.</p>
+                        <p>—Pau, castigat! I Quique llença la pedra a la brossa!</p>
+                        <p>Abaixo la mirada.
+                            <br>Tinc massa por d’en Quique per dir que menteix.
+                        </p>
+                        <p>Un altre cop ha sortit tot malament.
+                            <br>La Carla no té la pedra, jo estic castigat <br>i en Quique sempre pel mig enredant!
+                        </p>
+                        <p>Odio fer-me gran.
+                            <br>Odio l’institut.
+                            <br>Odio tenir grans a la cara.
+                            <br>Odio estar enamorat.
+                        </p>
+                    </div>
+                    <img id="noimgCapitols">
+                </div>
+                <div class="botonsCapitols">
+                    <div class="botoCapL" onclick="mostrar(6)">
+                        <h3 id="flexa">←</h3>
+                        <h3>Capítol 6</h3>
+                    </div>
+                    <div class="botoCapR" onclick="mostrar(8)">
+                        <h3>Capítol 8</h3>
+                        <h3 id="flexa">→</h3>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <!--__________________________________________________________________________________-->
+        <article class="capitols" id="capitol8">
+            <div class="c1">
+                <div class="column-row">
+                    <div class="parrafos">
+                        <h2><span style="font-size: 70%;">Capítol 8.</span> Pregadéu</h2>
+
+                        <p>Avui tinc molts deures.
+                            <br>Obro el llibre de naturals per la pàgina dels insectes.
+                            <br>M’agraden molt.
+                            <br>Crec que de gran seré biòleg i <strong id="destacadahover" onclick="destacar(2)">entomòleg.</strong>
+                        </p>
+                        <p>Començo a llegir.
+                            <br>Explica què fa el pregadéu amb la seva parella:
+                            <br>La femella es menja el mascle durant l’acte amorós.
+                            <br>Primer es menja els ulls, després els nervis de la gola <br>i, per últim, els òrgans sexuals.
+                        </p>
+                        <p>Quina por! Tanco el llibre esgarrifat.</p>
+                        <p>Com que demà tinc examen de matemàtiques, <br>estudio molt.
+                            <br>Els números em deixen esgotat.
+                            <br>M’estiro al llit i m’adormo de seguida.
+                        </p>
+                        <p>De cop, estic assegut el pati de casa prenent el sol.
+                            <br>La Carla és al meu costat.
+                            <br>Els seus cabells brillen.
+                            <br>Ens besem.
+                        </p>
+                    </div>
+                    <img id="noimgCapitols">
+                </div>
+                <div class="column-row">
+                    <div class="parrafos">
+                        <p>Els seus llavis tenen gust de maduixa.
+                            <br>Ella em mossega els llavis.
+                        </p>
+                        <p>Obro els ulls.
+                            <br>Ella em mira fixament i continua mossegant-me!
+                            <br>No puc dir res!
+                            <br>Ja no tinc boca!
+                            <br>La Carla se l’ha menjada.
+                            <br>Ara em menja les orelles i el coll!
+                            <br>La sang em regalima gola avall.
+                            <br>No puc fugir perquè em té agafat.
+                            <br>Però la desitjo tant!
+                        </p>
+                        <p>Tinc por. Molta por. No em puc moure!
+                            <br>Ara es menjarà el meu penis?
+                            <br>No! No! No!
+                        </p>
+                    </div>
+                    <img id="imgCapitols" src="img/c8-(1).png" alt="El Pau és atacat per un insecte amb la cara de la Carla.">
+                </div>
+                <div class="column-row">
+                    <div class="parrafos">
+                        <p>—Pau. Desperta!—crida la meva germana.</p>
+                        <p>—Ajudeu-me!—crido jo també.</p>
+                        <p>Per fi em desperto. He tingut un malson.</p>
+                        <p>—Tranquil Pau! Ningú es vol menjar el teu penis—diu la meva <br>germana rient.
+                        </p>
+                        <p>Jo miro al meu voltant. Sóc a la meva habitació.</p>
+                        <p>—Pau, Marta! A esmorzar! —crida la meva mare des de la cuina.</p>
+                        <p>Però jo no tinc massa gana.</p>
+                    </div>
+                    <img id="imgCapitols" src="img/c8-(2).png" alt="El Pau es toca la cara mentre crida de por.">
+                </div>
+                <div class="botonsCapitols">
+                    <div class="botoCapL" onclick="mostrar(7)">
+                        <h3 id="flexa">←</h3>
+                        <h3>Capítol 7</h3>
+                    </div>
+                    <div class="botoCapR" onclick="mostrar(9)">
+                        <h3>Capítol 9</h3>
+                        <h3 id="flexa">→</h3>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <!--__________________________________________________________________________________-->
+        <article class="capitols" id="capitol9">
+            <div class="c1">
+                <div class="column-row">
+                    <div class="parrafos">
+                        <h2><span style="font-size: 70%;">Capítol 9.</span> El paó</h2>
+
+                        <p>Després d’aquest malson <br>ja no tinc tantes ganes de besar la Carla.
+                        </p>
+                        <p>Quan entro a classe la miro, però ja no em sembla un àngel.
+                            <br>Només m’imagino la seva boca mossegant-me <br>i la sang que em regalima. Intento oblidar-ho.
+                        </p>
+                        <p>Tenim examen de matemàtiques. M’he de concentrar.
+                            <br>Contesto totes les preguntes.
+                            <br>I quan la professora no mira, <br>aixeco el full perquè en Quique pugui copiar les respostes.
+                        </p>
+                    </div>
+                    <img id="imgCapitols" src="img/c9-(1).png" alt="El Pau aquesta assegut en classe amb la Carla al costat mentre el Quique li mira l'examen al Pau.">
+                </div>
+                <div class="column-row">
+                    <div class="parrafos">
+                        <p>Mentrestant a l’hora del pati <br>continuo estudiant les tècniques de festeig animal.
+                            <br>N’hi havia d’haver alguna que em funcioni.
+                        </p>
+                        <p>Els paons. Que bonics són els paons!
+                            <br>A tothom agrada veure aquelles cues tan acolorides!
+                            <br>Per trobar parella, els paons es fixen en el color de les plomes, <br>les plomes del cap i en els cercles de les plomes de la cua.
+                            <br>Si tenen pocs cercles o una cua curta <br>significa que són massa joves o que estan malalts.
+                        </p>
+                        <p>Ostres! Per què no faig com el paó?
+                            <br>Puc canviar la meva imatge per atraure la Carla!
+                        </p>
+                        <p>Aleshores, començo a fixar-me en els pentinats <br>i en la roba de moda.
+                            <br>Em pentino el serrell cap amunt en forma de tupè.
+                            <br>Fins i tot em faig un pírcing al mugró. Quina tortura!
+                        </p>
+                        <p>Segur que aquest canvi d’imatge funcionarà <br>i tindré un munt de noies darrere meu!
+                            <br>Ara sí que la Carla em mirarà!
+                        </p>
+                    </div>
+                    <img id="imgCapitols" src="img/c9-(2).png" alt="El Pau es pentina el cabell feia arriba i es posa una jaqueta negra i uns pantalons vermells.">
+                </div>
+
+
+
+                <div class="column-row">
+                    <div class="parrafos">
+                        <p>L’endemà, quan entro a classe en Quique em diu: </p>
+                        <p>—Ei, pringat! On vas amb aquestes <strong id="destacadahover" onclick="destacar(3)">pintes</strong>?</p>
+                        <p>Tots em miren i jo em moro de vergonya.</p>
+                        <p>—No és el teu estil —diu rient. </p>
+                        <p>—Deixeu-lo estar —respon una companya de classe.</p>
+                        <p>A casa, el meu pare i la meva germana <br>també fan comentaris graciosos.
+                            <br>Es riuen de la meva imatge.
+                            <br>Per què tinc aquesta família?
+                            <br>No entenen que busco el meu lloc al món?
+                            <br>Vull conquerir la Carla i ningú m’entén.
+                            <br>Tot va de mal a pitjor.
+                        </p>
+                        <p>Per sort, arriben les vacances de Nadal.
+                            <br>Necessito estar uns dies ben lluny de l’institut.
+                        </p>
+                    </div>
+                    <img id="noimgCapitols">
+                </div>
+                <div class="column-row">
+                    <div class="parrafos">
+                        <p>A la tornada de vacances,<br>totes les meves il·lusions s’esvaeixen.
+                            <br>A classes ens canvien a tots de lloc.
+                            <br>La Carla ja no s’asseu al meu costat.
+                        </p>
+                        <p>La sort és que en Quique tampoc s’asseu darrere meu.
+                            <br>Però encara no he vist el pitjor:
+                            <br>la Carla es passeja agafada de la mà d’un noi de segon <br>que és mig metre més alt que jo.
+                        </p>
+                    </div>
+                    <img id="noimgCapitols" src="img/c9-(3).png">
+                </div>
+                <div class="botonsCapitols">
+                    <div class="botoCapL" onclick="mostrar(8)">
+                        <h3 id="flexa">←</h3>
+                        <h3>Capítol 8</h3>
+                    </div>
+                    <div class="botoCapR" onclick="mostrar(10)">
+                        <h3>Capítol 10</h3>
+                        <h3 id="flexa">→</h3>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <!--__________________________________________________________________________________-->
+        <article class="capitols" id="capitol10">
+            <div class="c1">
+                <div class="column-row">
+                    <div class="parrafos">
+                        <h2><span style="font-size: 70%;">Capítol 10.</span> El gos</h2>
+
+                        <p>Vull recuperar l’amor de la Carla.
+                            <br>Però com es recupera una cosa que no s’ha tingut mai?
+                            <br>Tant se val! Torno a estar molt trist.
+                        </p>
+                        <p>La noia dels meus somnis, <br>l’única cosa bona de la meva vida, <br>està amb un noi que segurament voldrà aprofitar-se d’ella.
+                            <br>L’he de protegir.
+                        </p>
+                        <p>Decideixo investigar aquell noi.
+                            <br>Segur que és una mala persona, un lladre o un delinqüent.
+                            <br>I jo, el descobriré i salvaré la Carla!
+                        </p>
+                        <p>Esbrino on viu.
+                            <br>Casa seva és a prop de la meva.
+                            <br>I cada tarda m’assec al portal i vigilo si surt o entra.
+                        </p>
+                        <p>Resulta que el noi és una persona ben normal:
+                            <br>va a comprar al supermercat, juga a bàsquet,...
+                            <br>Vigilar-lo és molt avorrit.
+                        </p>
+                    </div>
+                    <img id="noimgCapitols">
+                </div>
+                <div class="column-row">
+                    <div class="parrafos">
+                        <p>Una tarda, mentre estic assegut al portal, <br>veig una cosa que em crida l’atenció.
+                        </p>
+                        <p>Una velleta passeja el seu gos.
+                            <br>El gos ensuma el terra <br>i va fent pipí a totes les cantonades dels edificis.
+                        </p>
+                        <p>Fa pipí a la façana de la sabateria.
+                            <br>El sabater surt i crida:—La denunciaré!
+                        </p>
+                        <p>—Per què?—pregunta la velleta, espantada.</p>
+                        <p>—El seu gos sempre es pixa davant de la meva botiga
+                            <br>—li respon el sabater.
+                        </p>
+                        <p>—Jo no en tinc la culpa! Vostè té una gossa <br>i el meu gos marca territori fent pipí aquí—es defensa la velleta.
+                        </p>
+                    </div>
+                    <img id="imgCapitols" src="img/c10-(1).png" alt="Un gos gris amb taques es pixa davant d'una botiga.">
+                </div>
+                <div class="column-row">
+                    <div class="parrafos">
+                        <p>Guau! Quina idea més bona!
+                            <br>Puc marcar la casa de la Carla com el meu territori.
+                        </p>
+                        <p>Investigo on viu la Carla.
+                            <br>Sóc molt bon detectiu.
+                            <br>Aquella mateixa nit baixo les escombraries al carrer.
+                            <br>Els meus pares estan sorpresos:
+                            <br>—Has vist en Pau? Per fi comença a ajudar en les feines de casa!
+                        </p>
+                        <p>Després de llançar les escombraries al contenidor, <br>vaig caminant fins a casa de la Carla.
+                            <br>Un cop allí, vigilo que no em vegi ningú.
+                            <br>M’abaixo la cremallera de la bragueta <br>i faig pipí a la paret.
+                            <br>És un pla perfecte i ningú m’ha vist!
+                        </p>
+                        <p>Els dies següents bec molta aigua <br>i de nit vaig a fer pipí a la façana del pis de la Carla.
+                        </p>
+                        <p>Passen els dies però el pla no funciona.
+                            <br>La Carla i el seu xicot continuen junts.
+                            <br>Ella no es fixa en mi.
+                            <br>Jo continuo amb el meu pla cada nit.
+                        </p>
+                    </div>
+                    <img id="noimgCapitols">
+                </div>
+                <div class="column-row">
+                    <div class="parrafos">
+                        <p>Un vespre, mentre estic fent pipí, <br>algú m’agafa per l’espatlla:
+                        </p>
+                        <p>—Per fi t’enxampo!—em diu una veu.</p>
+                        <p>Em giro, sense poder parar de fer pipí, <br>i mullo les sabates de l’home que hi ha darrere meu.
+                        </p>
+                        <p>—Et creus molt graciós?—em diu, ben enfadat.</p>
+                        <p>—Perdoni, jo no volia....—començo a explicar-me.</p>
+                        <p>—Calla! Et denunciaré. Brut, més que brut!—em crida.</p>
+                        <p>—No, si us plau. No em denunciï —li demano.</p>
+                        <p>—Ara mateix et donaré un drap i lleixiu <br>i ho netejaràs tot–m’ordena.
+                        </p>
+                        <p>Sense protestar, frego la paret i la vorera.
+                            <br>Quina vergonya!
+                            <br>Si la Carla descobreix què he fet, <br>no em tornarà a parlar mai més.
+                        </p>
+                    </div>
+                    <img id="imgCapitols" src="img/c10-(2).png" alt="El Pau d'esquena pixant al costat d'un portal.">
+                </div>
+
+                <div class="column-row">
+                    <div class="parrafos">
+                        <p>Quan arribo a casa, la mare em pregunta:</p>
+                        <p>—On has estat? Estàvem molt preocupats.</p>
+                    </div>
+                    <img id="noimgCapitols">
+                </div>
+                <div class="column-row">
+                    <div class="parrafos">
+                        <p>Vaig a la cuina a beure un got d’aigua <br>i la mare em segueix:
+                        </p>
+                        <p>—Quina pudor de lleixiu. Què has fet?</p>
+                        <p>Abaixo el cap. Les llàgrimes em cauen cara avall.</p>
+                        <p>—Estàs molt estrany fill meu —em diu.</p>
+                        <p>Sense dir res, pujo a la meva habitació.
+                            <br>Estic cansat i vull dormir.
+                        </p>
+                        <p>La meva germana entra a l’habitació sense trucar la porta:</p>
+                        <p>—On t’has ficat? Ets un ximple! El papa està molt enfadat!
+                            <br>Però què és aquesta pudor? —pregunta tapant-se el nas.
+                        </p>
+                        <p>La faig fora de l’habitació i tanco la porta.
+                            <br>Només tinc ganes de plorar.
+                        </p>
+                        <p>Un cop més el meu pla no ha funcionat.
+                            <br>Però ho tornaré a intentar.
+                            <br>Faré l’impossible per aconseguir l’amor de la Carla.
+                        </p>
+                    </div>
+                    <img id="imgCapitols" src="img/c10-(3).png" alt="La mare del Pau l'espera davant de la porta i es veu al Pau entrant per aquesta. ">
+                </div>
+                <div class="botonsCapitols">
+                    <div class="botoCapL" onclick="mostrar(9)">
+                        <h3 id="flexa">←</h3>
+                        <h3>Capítol 9</h3>
+                    </div>
+                    <div class="botoCapR" onclick="mostrar(11)">
+                        <h3>Capítol 11</h3>
+                        <h3 id="flexa">→</h3>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <!--__________________________________________________________________________________-->
+        <article class="capitols" id="capitol11">
+            <div class="c1">
+                <div class="column-row">
+                    <div class="parrafos">
+                        <h2><span style="font-size: 70%;">Capítol 11.</span> L’hipopòtam</h2>
+
+                        <p>El curs avança, jo estic distret a classe i trec males notes.
+                            <br>Els meus pares van a parlar amb el meu tutor
+                            <br>Però els diu que no es preocupin, <br>que és l’edat i que estic en ple canvi hormonal.
+                        </p>
+                    </div>
+                    <img id="imgCapitols" src="img/c11-(1).png" alt="Els pares del Pau estan asseguts enfront del seu tutor en el seu despatx.">
+                </div>
+
+                <div class="column-row">
+                    <div class="parrafos">
+                        <p>Aquella nit el meu pare i jo tornem a discutir:</p>
+                        <p>—Si no espaviles, hauràs de repetir curs –em diu.</p>
+                        <p>—En Pau està distret i no estudia –afegeix la traïdora <br>de la meva germana.
+                        </p>
+                        <p>—Has de practicar un esport. Així aprendràs a esforçar-te
+                            <br>—insisteix el meu pare.
+                        </p>
+                        <p>—No vull fer esport. No m’agrada! —crido enfadat.</p>
+                        <p>—Vine aquí ara mateix —crida el meu pare.</p>
+                        <p>—Deixa’l estar. No li agrada fer esport. Accepta-ho
+                            <br>–diu la meva mare, donant-me suport.
+                        </p>
+                        <p>El mes de febrer se celebra la setmana cultural a l’institut.
+                            <br>S’organitzen tallers de percussió, teatre, jocs d’estratègia, etc.
+                            <br>Jo sóc dels últims en apuntar-me <br>i no tinc massa opcions.
+                            <br>Només queden places lliures per al taller de pastisseria.
+                            <br>Apa, ara a fer cuinetes!
+                        </p>
+                    </div>
+                    <img id="noimgCapitols">
+                </div>
+                <div class="column-row">
+                    <div class="parrafos">
+                        <p>Però el dia del taller tinc una sorpresa.
+                            <br>La Carla també s’hi ha apuntat. Que bé!
+                            <br>Oh, no! També hi ha el seu xicot.
+                            <br>Sóc la persona amb més mala sort del món.
+                        </p>
+                        <p>Hem de fer magdalenes.
+                            <br>Mentre afegeixo els ingredients en un recipient, <br>me’n recordo dels hipopòtams.
+                        </p>
+                        <p>Per escollir parella, <br>els hipopòtams fan una muntanya de fems, <br>hi pugen dalt i amb la cua escampen els fems a totes bandes fins que arriben a la femella escollida.
+                            <br>Ella queda meravellada i respon al mascle.
+                        </p>
+                        <p>En el taller de pastisseria no hi ha fems, <br>però hi ha molta xocolata, que és més bona.
+                            <br>Segur que a la Carla li encantarà estar coberta de xocolata!
+                            <br>Començo a llençar la xocolata per tota l’aula, <br>sobretot en direcció a la Carla.
+                        </p>
+                    </div>
+                    <img id="noimgCapitols">
+                </div>
+
+                <div class="column-row">
+                    <div class="parrafos">
+                        <p>Primer els meus companys s’enfaden, <br>però després s’hi afegeixen i tiren farina, ous, sucre...
+                            <br>La professora surt corrent a buscar al director.
+                            <br>Tots dos entren cridant:
+                        </p>
+                        <p>—Prou! Pareu! Pareu!</p>
+                        <p>—Pau, al meu despatx! –m’ordena el director.</p>
+                        <p>Quan surto de la classe <br>veig com el xicot de la Carla li neteja la xocolata de la cara.
+                            <br>Quina ràbia! I segur que a mi m’expulsaran.
+                            <br>Però els companys m’aplaudeixen.
+                            <br>Almenys és una victòria moral.
+                        </p>
+                    </div>
+                    <img id="imgCapitols" src="img/c11-(2).png" alt="El Pau en classe de cuina tirant xocolata pertot arreu.">
+                </div>
+
+                <div class="botonsCapitols">
+                    <div class="botoCapL" onclick="mostrar(10)">
+                        <h3 id="flexa">←</h3>
+                        <h3>Capítol 10</h3>
+                    </div>
+                    <div class="botoCapR" onclick="mostrar(12)">
+                        <h3>Capítol 12</h3>
+                        <h3 id="flexa">→</h3>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <!--__________________________________________________________________________________-->
+        <article class="capitols" id="capitol12">
+            <div class="c1">
+                <div class="column-row">
+                    <div class="parrafos">
+                        <h2><span style="font-size: 70%;">Capítol 12.</span> El cavallet de mar</h2>
+
+                        <p>M’han expulsat 15 dies de l’institut.
+                            <br>El director em recomana que vagi al psicòleg de l’institut.
+                            <br>Des de casa vaig fent els deures <br>que els professors m’envien per correu electrònic.
+                        </p>
+                        <p>Quan torno a l’institut, <br>el tutor em diu que a l’hora del pati tinc hora amb el psicòleg
+                        </p>
+                        <p>—Bon dia Pau. Sóc en Lluís. Passa i seu —em diu.</p>
+                        <p>De seguida em cau bé en Lluís.
+                            <br>És simpàtic i transmet confiança i tranquil·litat.
+                        </p>
+                        <p>—Com estàs? –em pregunta.</p>
+                        <p>—Bé —li contesto.</p>
+                        <p>—M’expliques per què vas muntar aquell embolic <br>al taller de pastisseria?
+                        </p>
+                        <p>—No —li dic.</p>
+                    </div>
+                    <img id="imgCapitols" src="img/c12-(1).png" alt="El Pau aquesta assegut amb el cap baix mentre el psicòleg parla.">
+                </div>
+                <div class="column-row">
+                    <div class="parrafos">
+                        <p>—Escolta Pau, jo no estic aquí per renyar-te, <br>sinó per ajudar-te. Vull que entenguis les conseqüències <br>del què vas fer –em diu en Lluís.
+                        </p>
+                        <p>I m’explica que jo no estic sol al món.
+                            <br>Que pensi en la mestra, <br>que no va poder fer el taller de pastisseria amb tranquil·litat;
+                            <br>en els companys, que no van poder fer les magdalenes;
+                            <br>i en les persones que van haver de netejar-ho tot.
+                        </p>
+                        <p>L’escolto amb el cap abaixat. En Lluís té raó.
+                            <br>He de començar a pensar en mi i deixar de fer-me mal.
+                            <br>La Carla no està enamorada de mi, i ho he d’acceptar.
+                        </p>
+                        <p>Quedem en veure’ns la setmana següent.</p>
+                        <p>Quan surto del despatx d’en Lluís, <br>penso en els cavallets de mar.
+                            <br>Escullen una parella per sempre
+                            <br>i s’amaguen darrere dels coralls i de les algues <br>amb les cues entrellaçades per festejar.
+                            <br>Això és el que fan la Carla i el seu xicot:
+                            <br>s’amaguen pels racons de l’institut per besar-se.
+                        </p>
+                    </div>
+                    <img id="imgCapitols" src="img/c12-(2).png" alt="El Pau amb una expressió de tristesa.">
+                </div>
+
+
+
+                <div class="column-row">
+                    <div class="parrafos">
+                        <p>Jo sóc un cavallet de mar sense parella.
+                            <br>Estic trist, molt trist.
+                            <br>Moro d’amor per la Carla i ella ni se n’adona.
+                        </p>
+                    </div>
+                    <img id="noimgCapitols">
+                </div>
+                <div class="botonsCapitols">
+                    <div class="botoCapL" onclick="mostrar(11)">
+                        <h3 id="flexa">←</h3>
+                        <h3>Capítol 11</h3>
+                    </div>
+                    <div class="botoCapR" onclick="mostrar(13)">
+                        <h3>Capítol 13</h3>
+                        <h3 id="flexa">→</h3>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <!--__________________________________________________________________________________-->
+        <article class="capitols" id="capitol13">
+            <div class="c1">
+                <div class="column-row">
+                    <div class="parrafos">
+                        <h2><span style="font-size: 70%;">Capítol 13.</span> El dofí</h2>
+
+                        <p>Cada dilluns tinc sessió amb en Lluís, el psicòleg.
+                            <br>Era un bon home i les nostres xerrades m’agraden.
+                            <br>Ja no em distrec tant a classe i les notes estan millorant.
+                        </p>
+                        <p>En Lluís em fa descobrir la poesia <br>i passo estones a la biblioteca buscant llibres de poemes.
+                            <br>Alguns poemes parlen del que jo sento: dolor i desamor.
+                        </p>
+                        <p>A vegades, a les sessions amb en Lluís, li llegeixo algun poema.</p>
+                        <p>Un dia em diu:</p>
+                        <p>—Pau, ja sé què et passa.</p>
+                        <p>—Ah si? Què? —li pregunto.</p>
+                        <p>—Estàs enamorat —contesta.</p>
+                        <p>L’ha encertada de ple!</p>
+                        <p>—No passa res. Tots ens enamorem.
+                            <br>Forma part de fer-se gran —em diu.
+                        </p>
+                    </div>
+                    <img id="noimgCapitols">
+                </div>
+                <div class="column-row">
+                    <div class="parrafos">
+                        <p>—Jo no vull fer-me gran. És un rotllo —li dic, enfadat.</p>
+                        <p>—Sé que pot resultar difícil, <br>però ens hem d’acostumar a reconèixer <br>els nostres sentiments. Has de tenir paciència —em diu.
+                        </p>
+                        <p>Me’l miro i li parlo amb sinceritat:</p>
+                        <p>—Tens raó. Estic enamorat.
+                            <br>Però la noia que estimo, estima un altre.
+                        </p>
+                        <p>—No sempre escollim bé a la primera.
+                            <br>L’amor ha de ser fàcil.
+                            <br>Si et fa patir és que t’has equivocat de persona –em diu.
+                        </p>
+                        <p>En Lluís m’aconsella que em fixi amb altres noies.
+                            <br>Però jo només vull la Carla.
+                        </p>
+                    </div>
+                    <img id="noimgCapitols">
+                </div>
+                <div class="column-row">
+                    <div class="parrafos">
+                        <p>Aquest trimestre s’ha creat un equip d’escacs a l’institut.
+                            <br>M’hi apunto.
+                            <br>Sóc bo jugant a escacs, i si em concentro en el joc, <br>no pensaré tant en la Carla.
+                        </p>
+                        <p>Entre la poesia, la biblioteca i els escacs <br>tinc totes les tardes ocupades.
+                        </p>
+                        <p>A l’equip d’escacs conec la Mireia.
+                            <br>Fa primer d’ESO, com jo, però va a l’altre grup, el B.
+                            <br>Quedem sovint a l’hora del pati per jugar a escacs.
+                        </p>
+                        <p>La mare està contenta <br>quan li dic que m’he apuntat a escacs.
+                            <br>En canvi, el pare...
+                        </p>
+                        <p>—Ara jugues a escacs? —em pregunta.</p>
+                        <p>—Si. Però ja fa anys que hi jugo —li contesto.</p>
+                        <p>—Ah si? Amb qui? —fa ell.</p>
+                        <p>—Amb l’ordinador —li contesto.</p>
+                    </div>
+                    <img id="noimgCapitols">
+                </div>
+                <div class="column-row">
+                    <div class="parrafos">
+                        <p>—Això no és jugar. Això és una tonteria —em contesta.</p>
+                        <p>—No. Els escacs són un esport!
+                            <br>Necessites una estratègia i unes regles, com en el futbol o el bàsquet.
+                        </p>
+                        <p>—Deixeu-lo estar! Hem de donar-li suport! –diu la meva mare.</p>
+                        <p>—És que sempre està enfadat. No se li pot dir res! –s’hi afegeix <br>la meva germana.
+                        </p>
+                        <p>—Dona... És que els escacs no són un esport!
+                            <br>—defensa tossut el meu pare.
+                        </p>
+                        <p>No li faig cas. No val la pena.</p>
+                        <p>Avui a la tarda hem quedat amb la Mireia <br>per fer una partida d’escacs a la biblioteca.
+                            <br>Quan arriba em sorprèn llegint un poema.
+                        </p>
+                    </div>
+                    <img id="noimgCapitols">
+                </div>
+
+
+                <!--mirar apartado palabra destacada-->
+                <div class="column-row">
+                    <div class="parrafos">
+
+                        <span style="font-weight: bold;">
+                            <p>L'AMOR</p>
+                        </span>
+                        <span style="font-weight: lighter;">
+                            <p>Tot en l'amor s'emplena de sentit.
+                                <br>La força renovada d'aquest cor <br>tan malmenat per la vida, d'on surt <br>sinó del seu immens cabal d'amor?
+                            </p>
+                            <p>És, doncs, sols per l'amor que ens creixen <br>roses als dits i se'ns revelen els misteris;
+                                <br>i en l'amor tot és just i necessari.
+                            </p>
+                            <p>Creu en el cos, per tant, i en ell assaja <br>de perdurar, i fes que tot perduri <br>dignificant-ho sempre amb amorosa <br>sol·licitud: així donaràs vida.
+                            </p>
+                            <p id="miquel">Miquel Martí i Pol</p>
+                        </span>
+
+                        <!--            poema del texto, hay que cambiar tipografia o buscar varientes-->
+                    </div>
+                    <img id="noimgCapitols">
+                </div>
+                <div class="column-row">
+                    <div class="parrafos">
+                        <p>—Oh, Pau! Que bonic —diu ella, sorpresa.</p>
+                        <p>—És un poema.</p>
+                        <p>—Llegeixes i recites poemes?</p>
+                        <p>—Si, com els dofins —li contesto.</p>
+                        <p>—Els dofins? –em pregunta estranyada. </p>
+                        <p>—Sí, els dofins fan uns sons que rimen entre ells, <br>com si fossin poemes.
+                        </p>
+                    </div>
+                    <img id="imgCapitols" src="img/c13-(1).png" alt="El Pau recita un poema per a la Mireia que té el cabell blau .">
+                </div>
+                <div class="botonsCapitols">
+                    <div class="botoCapL" onclick="mostrar(12)">
+                        <h3 id="flexa">←</h3>
+                        <h3>Capítol 12</h3>
+                    </div>
+                    <div class="botoCapR" onclick="mostrar(14)">
+                        <h3>Capítol 14</h3>
+                        <h3 id="flexa">→</h3>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <!--__________________________________________________________________________________-->
+        <article class="capitols" id="capitol14">
+            <div class="c1">
+                <div class="column-row">
+                    <div class="parrafos">
+                        <h2><span style="font-size: 70%;">Capítol 14.</span> El cérvol </h2>
+
+                        <p>M’agradava formar part de l’equip d’escacs.
+                            <br>A poc a poc vaig començar a conèixer altres alumnes.
+                            <br>Fins i tot un dia en Quique, el xulet, em va dir:
+                        </p>
+                        <p>—Ei xaval, m’han dit que estàs al grup d’escacs? Molt bé.
+                            <br>Demostra a tothom que la classe de primer A és la millor.
+                        </p>
+                        <p>I va afegir somrient:</p>
+                        <p>—Has crescut, eh?</p>
+                        <p>En Lluís i jo ens veiem cada vegada menys.
+                            <br>Els escacs i els exàmens m’ocupen tot el temps.
+                            <br>A vegades me’l trobo al passadís de l’institut i em pregunta:
+                        </p>
+                        <p>—Com va Pau?</p>
+                        <p>—Molt bé —li responc, i ens acomiadem.</p>
+                        <p>En Lluís em cau molt bé.
+                            <br>Fins i tot algun dia juguem a escacs junts.
+                        </p>
+                    </div>
+                    <img id="noimgCapitols">
+                </div>
+                <div class="column-row">
+                    <div class="parrafos">
+                        <p>La Mireia també juga bé, <br>però quan la partida està a punt d’acabar <br>es posa nerviosa i s’equivoca.
+                            <br>Jo vull ajudar-la i l’animo: li dic que es concentri, <br>que cregui en ella.
+                        </p>
+                        <p>Els escacs són un joc apassionant.
+                            <br>Representen dos exèrcits i cada jugador en dirigeix un.
+                            <br>Cal seguir unes normes i només hi ha un guanyador.
+                        </p>
+                        <p>Dins meu també hi havia una batalla constant.
+                            <br>Dos exèrcits: el nen que deixo enrere, <br>i l’adolescent que vol sortir.
+                            <br>És qüestió de temps que el jove acabi guanyant el nen.
+                            <br>Ho he d’acceptar. Ho accepto.
+                        </p>
+                        <p>Uns quants alumnes ens apuntem a un campionat d’escacs.
+                            <br>Els propers dies són complicats, <br>perquè a més dels entrenaments, també tinc exàmens.
+                        </p>
+                        <p>La mare està preocupada per mi.
+                            <br>Jo li insisteixo que estic bé, que tinc molta feina <br>i em falta temps per fer-ho tot. Però estic bé.
+                        </p>
+                    </div>
+                    <img id="noimgCapitols">
+                </div>
+                <div class="column-row">
+                    <div class="parrafos">
+                        <p>Un matí, a l’hora del pati, mentre sóc a la biblioteca <br>jugant escacs amb en Daniel, un company de l’equip, <br>veig la Carla.
+                        </p>
+                        <p>Què fa aquí?
+                            <br>Sempre està al pati amb les amigues.
+                            <br>Em poso nerviós i no paro atenció a la partida.
+                            <br>En Daniel es queixa.
+                        </p>
+                        <p>—Ei! Què et passa? Jugues molt malament.</p>
+                        <p>—Ho sento. Estic distret.</p>
+                    </div>
+                    <img id="imgCapitols" src="img/c14-(1).png" alt="El Pau jugant escacs amb el Daniel un noi amb ulleres i cabell ros.">
+                </div>
+                <div class="column-row">
+                    <div class="parrafos">
+                        <p>Quan sona el timbre tornem a classe.</p>
+                        <p>La Carla i jo sortim junts de la biblioteca.
+                            <br>Té els ulls vermells i plorosos. També està distreta.
+                            <br>Potser ha discutit amb el seu xicot? Tan de bo!
+                        </p>
+                        <p>Sóc el noi amb més sort de la Terra.
+                            <br>Em sento eufòric!
+                            <br>Tinc ganes de començar el campionat d’escacs <br>i d’acabar els exàmens.
+                        </p>
+                        <p>Al campionat d’escacs hi participen moltes escoles <br>però hi ha pocs jugadors, a diferència del futbol.
+                        </p>
+                        <p>Per sorpresa meva, guanyo la primera partida <br>i em classifico per a la següent
+                            <br>La Mireia, en canvi, perd la partida i no es classifica.
+                        </p>
+                        <p>Les properes setmanes, <br>la Mireia ve cada tarda a casa a jugar a escacs.
+                            <br>Així m’ajuda a entrenar-me.
+                        </p>
+                        <p>Un dia la meva germana em pregunta:
+                            <br>—Pau, avui també vindrà la teva xicota?
+                        </p>
+                    </div>
+                    <img id="noimgCapitols">
+                </div>
+                <div class="column-row">
+                    <div class="parrafos">
+                        <p>—No és la meva xicota. És la meva entrenadora
+                            <br>—li contesto.
+                        </p>
+                        <p>—Però si l’han desqualificat!</p>
+                        <p>—Calla pesada! —quin pal de germana.</p>
+                        <p>Les seves paraules, però, em fan pensar.
+                            <br>La Carla m’agrada molt, però sóc incapaç de dir-li res.
+                            <br>En canvi amb la Mireia tot és fàcil i em sento bé.
+                        </p>
+                        <p>Les coses comencen a canviar.
+                            <br>Mesos enrere hauria fet com els cérvols quan estan en <strong id="destacadahover" onclick="destacar(4)">zel.</strong>
+                            <br>Hauria lluitat contra el xicot de la Carla <br>per aconseguir el seu amor.
+                            <br>Ara la Carla està sola, i sóc incapaç d’acostar-me a ella.
+                        </p>
+                    </div>
+                    <img id="noimgCapitols">
+                </div>
+                <div class="botonsCapitols">
+
+                    <div class="botoCapL" onclick="mostrar(13)">
+                        <h3 id="flexa">←</h3>
+                        <h3>Capítol 13</h3>
+                    </div>
+                    <div class="botoCapR" onclick="mostrar(15)">
+                        <h3>Capítol 15</h3>
+                        <h3 id="flexa">→</h3>
+                    </div>
+                </div>
+            </div>
+
+        </article>
+        <!--__________________________________________________________________________________-->
+        <article class="capitols" id="capitol15">
+            <div class="c1">
+                <div class="column-row">
+                    <div class="parrafos">
+                        <h2><span style="font-size: 70%;">Capítol 15.</span> L’au del paradís</h2>
+
+                        <p>Ja som al tercer trimestre, i el curs està a punt d’acabar.
+                            <br>Tinc poques ganes de treballar.
+                            <br>Només penso en les vacances.
+                        </p>
+                        <p>A classe, en Quique ja no es posa amb mi, <br>però continua fent bromes amb els companys més dèbils.
+                            <br>És un covard.
+                        </p>
+                        <p>A casa, de tant en tant, el meu pare em pregunta pels escacs.
+                            <br>Encara no m’han eliminat. Vaig guanyant partides.
+                        </p>
+                        <p>El pati de l’institut està preciós amb les moreres <br>plenes de fulles que fan ombra.
+                            <br>Avui, en comptes d’anar a la biblioteca, <br>decideixo sortir al pati.
+                            <br>Al passadís em trobo la Carla de cara.
+                        </p>
+                        <p>—Pau, avui surts al pati? —em pregunta.</p>
+                        <p>—Sí —li contesto.</p>
+                        <p>—T’acompanyo —em diu.</p>
+                    </div>
+                    <img id="noimgCapitols">
+                </div>
+                <div class="column-row">
+                    <div class="parrafos">
+                        <p>Caminem de costat en silenci.
+                            <br>No soc capaç de dir-li res, ni mitja paraula.
+                            <br>S’acomiada de mi i jo continuo mut. Quin ximple!
+                        </p>
+                        <p>A la classe de matemàtiques, la professora em felicita</p>
+                        <p>—Com sabeu a en Pau només li queda una partida <br>per arribar a la final del campionat d’escacs.
+                            <br>Aquest dissabte es jugarà el torneig al gimnàs de l’institut.
+                            <br>Us espero a tots per animar-lo —diu
+                        </p>
+                        <p>El dissabte, en el torneig, molts companys m’animen.
+                            <br>Jugo contra un noi de tercer d’ESO d’un altre institut.
+                            <br>La partida dura 4 hores i guanyo. Estic a la final!
+                        </p>
+                        <p>Tots els companys m’aplaudeixen.
+                            <br>La Mireia m’abraça.
+                            <br>La Carla ha marxat.
+                        </p>
+                    </div>
+                    <img id="imgCapitols" src="img/c15-(1).png" alt="El Pau sopant amb els seus pares i la seva germana en una taula rodona.">
+                </div>
+                <div class="column-row">
+                    <div class="parrafos">
+                        <p>A casa tota la família està molt contenta.
+                            <br>La final és d’aquí a dues setmanes <br>i els meus pares i la meva germana volen venir.
+                        </p>
+                    </div>
+                    <img id="noimgCapitols">
+                </div>
+                <div class="column-row">
+                    <div class="parrafos">
+                        <p>El dia de la final tota la família és a primera fila.
+                            <br>La meva parella de joc es diu Ramon i fa segon d’ESO.
+                            <br>Ell juga amb les peces negres i jo amb les blanques.
+                            <br>La partida és llarga. En Ramon és bo.
+                            <br>Perdo algunes peces importants, <br>però, a poc a poc, encerclo el seu rei <br>fins que no té escapatòria.
+                        </p>
+                        <p>Escac i mat! Partida guanyada.</p>
+                    </div>
+                    <img id="noimgCapitols">
+                </div>
+
+
+                <div class="column-row">
+                    <div class="parrafos">
+                        <p>Felicitats! —el meu pare m’abraça.</p>
+                        <p>La mare i la meva germana em fan petons.
+                            <br>Estan molt contentes i emocionades.
+                            <br>La Carla també em felicita.
+                            <br>És una gran victòria.
+                            <br>Ara sóc el millor de l’institut!
+                            <br>M’he guanyat el respecte dels companys.
+                        </p>
+                    </div>
+
+                    <img id="imgCapitols" src="img/c15-(3).png" alt="El Pau i el seu pare s'abracen de felicitat.">
+
+                </div>
+                <div class="column-row">
+                    <div class="parrafos">
+                        <p>Els exàmens també em van bé.
+                            <br>Els aprovo tots.
+                        </p>
+                        <p>Abans d’acabar el curs celebrem la festa de fi de curs.
+                            <br>És l’última oportunitat per utilitzar tots els meus encants, <br>com un ocell del paradís: aniré ben pentinat, ben vestit <br>i demanaré a la Carla que balli amb mi.
+                            <br>M’hi atreviré!
+                        </p>
+                        <p>La nit del ball, el gimnàs està tot decorat.
+                            <br>Hi ha una taula gran amb menjar i begudes.
+                            <br>Sona la música.
+                        </p>
+                        <p>La Mireia és a l’altra banda del gimnàs.
+                            <br>Ens mirem i ens saludem amb la mà.
+                            <br>Quan la Carla entra al gimnàs, només tinc ulls per a ella.
+                            <br>Sento la meva cançó preferida de Justin Bieber <br>i surto a la pista a ballar.
+                            <br>Estic tan content que em trec la jaqueta, <br>la faig rodar sobre el meu cap <br>i la llanço als peus de la Carla.
+                            <br>Espero que la Carla vingui a ballar amb mi.
+                            <br>Ho espero de tot cor.
+                            <br>Però no ve. Estic ballant sol.
+                        </p>
+                    </div>
+                    <img id="imgCapitols" src="img/c15-(4).png" alt="El Pau ballant feliç en el mitjà de la pista.">
+                </div>
+                <div class="column-row">
+                    <div class="parrafos">
+                        <p>Tothom em mira i aplaudeix. Quina vergonya!</p>
+                    </div>
+                    <img id="noimgCapitols">
+                </div>
+
+
+                <div class="column-row">
+                    <div class="parrafos">
+                        <p>Estic a punt de sortir corrent, <br>quan veig que algú se m’acosta amb un vestit verd.
+                            <br>M’agafa de la mà, i em diu:
+                        </p>
+                        <p>—Ets un ballarí magnífic! </p>
+                        <p>Ballem junts, donant voltes i rient.
+                            <br>La resta d’alumnes s’animen i també surten a la pista.
+                        </p>
+                        <p>En acabar la cançó ens abracem.</p>
+                        <p>—Moltes gràcies per ajudar-me a guanyar —li dic.</p>
+                        <p>—Gràcies a tu —em diu ella.</p>
+                        <p>I ens besem... als llavis...
+                            <br>El meu primer petó és per a la Mireia.
+                            <br>És meravellós!
+                        </p>
+                        <p>En Pau adult ha guanyat la partida a en Pau petit.
+                            <br>Potser fer-se gran no és un rotllo.
+                        </p>
+                    </div>
+                    <img id="imgCapitols" src="img/c15-(5).png" alt="El Pau es besa amb la Mireia amb un gran cor rosat darrere d'ells.">
+                </div>
+                <div class="botonsCapitols">
+                    <div class="botoCapL" onclick="mostrar(14)">
+                        <h3 id="flexa">←</h3>
+                        <h3>Capítol 14</h3>
+                    </div>
+                    <div class="botoCapR" onclick="mostrar(16)">
+                        <h3>Final</h3>
+                        <h3 id="flexa">→</h3>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+
+
+
+
+        <article class="capitols" id="Final">
+            <div class="cfinal">
+                <div class="maquetacionFinal">
+
+
+                    <h2 id="Felicitats">Felicitats, has arribat
+                        <br>al final de la lectura!!!
+                    </h2>
+
+                    <img id="imgCapitolsFinal" src="img/c15.gif">
+
+                </div>
+                <div class="botonsCapitols">
+                    <div class="botoCapL" onclick="mostrar(15)">
+                        <h3 id="flexa">←</h3>
+                        <h3>Capítol 15</h3>
+                    </div>
+                    <div class="botoCapR" onclick="mostrar(1)">
+                        <h3>Inici</h3>
+                        <h3 id="flexa">→</h3>
+                    </div>
+                </div>
+                <div class="cora1"></div>
+                <div class="cora2"></div>
+                <div class="cora3"></div>
+                <div class="cora4"></div>
+                <div class="cora5"></div>
+            </div>
+
+        </article>
+    </section>
+    <!--    <div class="degradadoInferiror"> </div>-->
+    <script src="js/codi.js"></script>
+</body>
+
+</html>
