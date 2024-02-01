@@ -5,9 +5,9 @@
      --colorTexto: #303030;
      --colorBorde: #000000;
      --estiloTexto: 'IBM Plex Sans', sans-serif;
-     --medidaTexto-p: 16px;
      --medidaTexto-h2: 20px;
      --medidaTexto-h3: 18px;
+     --medidaTexto-p: 16px;
      --cursorPuntero: url(../img/punteroNegro.png), auto;
      --cursorHover: url(../img/hoverNegro.png), auto;
      --imgCruz: url(../img/cruz.png);
@@ -421,7 +421,7 @@
      cursor: var(--cursorHover);
 }
  .ajustes {
-     width: 20rem;
+     width: 21.5rem;
      height: 100vh;
      background-color: var(--colorFondoTaronja);
      z-index: 7;
@@ -444,13 +444,14 @@
      cursor: var(--cursorHover);
 }
  .titulo {
-     margin-top: 4rem;
+     margin-top: 3rem;
      margin-bottom: 0;
      font-size: var(--medidaTexto-h2);
 }
 
 .ajustaments_p {
     margin-top: 0rem;
+    margin-bottom: 1rem;
 }
 
 
@@ -502,9 +503,21 @@
      flex-direction: row;
      flex-wrap: wrap;
 }
+
+.ajust_d {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ajust_d p{
+    margin: 0;
+}
+
  #tipo1 {
      display: flex;
      column-gap: 2rem;
+}
 }
  .letra1 {
      display: flex;
@@ -670,21 +683,21 @@
      width: 50%;
 }
  .blanco {
-     width: 2rem;
-     height: 2rem;
+     width: 1.5rem;
+     height: 1.5rem;
      border-radius: 100px;
      border: 2px solid #000000;
      background-color: white;
 }
  .negre {
-     width: 2rem;
-     height: 2rem;
+     width: 1.5rem;
+     height: 1.5rem;
      border-radius: 100px;
      background-color: black;
      border: 2px solid #FFFFFF;
 }
  .bloqueApartadosAjustes {
-     width: 76%;
+     width: 100%;
      margin: 0 auto;
      display: flex;
      justify-content: space-between;

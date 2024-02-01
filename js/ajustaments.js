@@ -52,13 +52,11 @@ function Estilo_Tipo() {
 
       document.documentElement.style.setProperty("--estiloTexto", 'Merriweather, serif');
 
-
       clar = false;
       elemento.src = "img/sinestiloActivado.svg"; // Cambiar a imagen de modo oscuro
    } else {
 
       document.documentElement.style.setProperty("--estiloTexto", 'IBM Plex Sans, sans-serif');
-
 
       clar = true;
       elemento.src = "img/estiloActivado.svg"; // Cambiar a imagen de modo claro
@@ -70,25 +68,20 @@ function Medida_Tipo() {
 
 
    if (clar) {
-      document.documentElement.style.setProperty("--medidaTexto-p", " 16px");
-      document.documentElement.style.setProperty("--medidaTexto-p", " 20px");
-      document.documentElement.style.setProperty("--medidaTexto-h2", " 20px");
-      document.documentElement.style.setProperty("--medidaTexto-h2", " 24px");
-      document.documentElement.style.setProperty("--medidaTexto-h3", " 18px");
-      document.documentElement.style.setProperty("--medidaTexto-h3", " 22px");
-      document.documentElement.style.setProperty("--column-gap", " 0.6rem");
+      document.documentElement.style.setProperty("--medidaTexto-h2", "23px");
+      document.documentElement.style.setProperty("--medidaTexto-h3", "19px");
+      document.documentElement.style.setProperty("--medidaTexto-p", "18px");
+      document.documentElement.style.setProperty("--column-gap", " 2rem");
+      
 
 
       clar = false;
       elemento.src = "img/grandeActivado.svg"; // Cambiar a imagen de modo oscuro
    } else {
-      document.documentElement.style.setProperty("--medidaTexto-p", "20px");
-      document.documentElement.style.setProperty("--medidaTexto-p", "16px");
-      document.documentElement.style.setProperty("--medidaTexto-h2", "24px");
-      document.documentElement.style.setProperty("--medidaTexto-h2", "20px");
-      document.documentElement.style.setProperty("--medidaTexto-h3", "22px");
-      document.documentElement.style.setProperty("--medidaTexto-h3", "18px");
-      document.documentElement.style.setProperty("--column-gap", " 2rem");
+      document.documentElement.style.setProperty("--medidaTexto-h2", " 20px");
+      document.documentElement.style.setProperty("--medidaTexto-h3", " 18px");
+      document.documentElement.style.setProperty("--medidaTexto-p", " 16px");
+      document.documentElement.style.setProperty("--column-gap", " 0.6rem");
 
 
       clar = true;
