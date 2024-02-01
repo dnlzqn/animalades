@@ -6,9 +6,11 @@ function modo_Oscuro() {
 
 
    if (clar) {
-      document.documentElement.style.setProperty("--colorFondoAzul", "#3CA3B7");
+      document.getElementById("fons_barra").style.backgroundImage = "url('img/fonss_o.svg')";
+      document.documentElement.style.setProperty("--colorFondoAzul", "#008ba6");
+      document.documentElement.style.setProperty("--colorFondoTaronja", "#b07a14");
       document.documentElement.style.setProperty("--colorFondo", "#222222");
-      document.documentElement.style.setProperty("--colorTexto", "#FFFFFF");
+      document.documentElement.style.setProperty("--colorTexto", "#f1eff1");
       document.documentElement.style.setProperty("--cursorPuntero", "url(../img/punteroBlanco.png), auto");
       document.documentElement.style.setProperty("--cursorHover", "url(../img/hoverBlanco.png), auto");
       document.documentElement.style.setProperty("--imgCruz", "url(../img/cruzBlanca.png)");
@@ -16,14 +18,16 @@ function modo_Oscuro() {
       document.documentElement.style.setProperty("--cora2", "url(../img/cora2vnegro.svg)");
       document.documentElement.style.setProperty("--cora4", "url(../img/cora4vnegro.svg)");
       document.documentElement.style.setProperty("--cora5", "url(../img/cora5vnegro.svg)");
-      document.documentElement.style.setProperty("--colorFelicitats", "#FFFFFF");
+      document.documentElement.style.setProperty("--colorFelicitats", "#f1eff1");
 
 
       clar = false;
       elemento.src = "img/oscuroActivado.svg"; // Cambiar a imagen de modo oscuro
 
    } else {
+      document.getElementById("fons_barra").style.backgroundImage = "url('img/fonss.svg')";
       document.documentElement.style.setProperty("--colorFondoAzul", "#70C7E0");
+      document.documentElement.style.setProperty("--colorFondoTaronja", "#e7ac3c");
       document.documentElement.style.setProperty("--colorFondo", "#F4F4F4");
       document.documentElement.style.setProperty("--colorTexto", "#000000");
       document.documentElement.style.setProperty("--cursorPuntero", "url(../img/punteroNegro.png), auto");

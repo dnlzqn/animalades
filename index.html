@@ -18,28 +18,32 @@
       </div>
       <div class="menuCapitulos">
          <div id="cruz"></div>
-         <h2> ÍNDEX </h2>
-         <p class="opcMenu" onclick="mostrar(1);"><strong> Capítol 1. Per que jo?</strong></p>
-         <p class="opcMenu" onclick="mostrar(2);"><strong> Capítol 2. De mal a pitjor</strong></p>
-         <p class="opcMenu" onclick="mostrar(3);"><strong> Capítol 3. Excursió al zoo</strong></p>
-         <p class="opcMenu" onclick="mostrar(4);"><strong> Capítol 4. M’encanta l’ordre alfabètic</strong></p>
-         <p class="opcMenu" onclick="mostrar(5);"><strong> Capítol 5. El grill</strong></p>
-         <p class="opcMenu" onclick="mostrar(6);"><strong> Capítol 6. El cargo</strong></p>
-         <p class="opcMenu" onclick="mostrar(7);"><strong> Capítol 7. El pingüí emperador</strong></p>
-         <p class="opcMenu" onclick="mostrar(8);"><strong> Capítol 8. Pregadéu</strong></p>
-         <p class="opcMenu" onclick="mostrar(9);"><strong> Capítol 9. El paó</strong></p>
-         <p class="opcMenu" onclick="mostrar(10);"><strong> Capítol 10. El gos</strong></p>
-         <p class="opcMenu" onclick="mostrar(11);"><strong> Capítol 11. L’hipopòtam</strong></p>
-         <p class="opcMenu" onclick="mostrar(12);"><strong> Capítol 12. El cavallet de mar</strong></p>
-         <p class="opcMenu" onclick="mostrar(13);"><strong> Capítol 13. El dofí</strong></p>
-         <p class="opcMenu" onclick="mostrar(14);"><strong> Capítol 14. El cérvol</strong></p>
-         <p class="opcMenu" onclick="mostrar(15);"><strong> Capítol 15. L’au del paradís</strong></p>
+         <h2>ÍNDEX</h2>
+         <br>
+         <h3>Ves directament a un dels quinze capítols d'aquest llibre.</h3>
+         <p class="opcMenu" onclick="mostrar(1);"><strong>Capítol 1. Per que jo?</strong></p>
+         <p class="opcMenu" onclick="mostrar(2);"><strong>Capítol 2. De mal a pitjor</strong></p>
+         <p class="opcMenu" onclick="mostrar(3);"><strong>Capítol 3. Excursió al zoo</strong></p>
+         <p class="opcMenu" onclick="mostrar(4);"><strong>Capítol 4. M’encanta l’ordre alfabètic</strong></p>
+         <p class="opcMenu" onclick="mostrar(5);"><strong>Capítol 5. El grill</strong></p>
+         <p class="opcMenu" onclick="mostrar(6);"><strong>Capítol 6. El cargo</strong></p>
+         <p class="opcMenu" onclick="mostrar(7);"><strong>Capítol 7. El pingüí emperador</strong></p>
+         <p class="opcMenu" onclick="mostrar(8);"><strong>Capítol 8. Pregadéu</strong></p>
+         <p class="opcMenu" onclick="mostrar(9);"><strong>Capítol 9. El paó</strong></p>
+         <p class="opcMenu" onclick="mostrar(10);"><strong>Capítol 10. El gos</strong></p>
+         <p class="opcMenu" onclick="mostrar(11);"><strong>Capítol 11. L’hipopòtam</strong></p>
+         <p class="opcMenu" onclick="mostrar(12);"><strong>Capítol 12. El cavallet de mar</strong></p>
+         <p class="opcMenu" onclick="mostrar(13);"><strong>Capítol 13. El dofí</strong></p>
+         <p class="opcMenu" onclick="mostrar(14);"><strong>Capítol 14. El cérvol</strong></p>
+         <p class="opcMenu" onclick="mostrar(15);"><strong>Capítol 15. L’au del paradís</strong></p>
       </div>
       <div class="ajustes">
          <div id="cruz2"></div>
-         <h2> AJUSTAMENTS </h2>
+         <h2>AJUSTAMENTS</h2>
          <br>
-         <p class="titulo"><strong>Modo de color</strong></p>
+         <h3>Modifica l'aparença visual d'aquesta pàgina web.</h3>
+         <p class="titulo"><strong>Mode fosc o clar</strong></p>
+         <p class="ajustaments_p">Aquí pots activar el mode fosc per llegir a la nit o en llocs amb poca llum.</p>
          <div id="ClaroOscuro" onclick="modo_Oscuro()" class="ClaroOscuro">
             <div class="bloqueApartadosAjustes">
                <div class="blanco"></div>
@@ -49,6 +53,7 @@
          </div>
          <br>
          <p class="titulo"><strong>Estil de lletra</strong></p>
+         <p class="ajustaments_p">Aquí pots canviar la forma de les lletres.</p>
          <div id="EstiloTipo" onclick="Estilo_Tipo()" class="EstiloTipo">
             <div class="bloqueApartadosAjustes">
                <div id="tipo1">
@@ -59,6 +64,7 @@
             </div>
          </div>
          <p class="titulo"><strong>Mida de lletra</strong></p>
+         <p class="ajustaments_p">Aquí pots canviar la mida de les lletres.</p>
          <div id="MedidaTipo" onclick="Medida_Tipo()" class="MedidaTipo">
             <div class="bloqueApartadosAjustes">
                <p id="mida1">Aa</p>
@@ -66,13 +72,13 @@
                <p id="mida2">Aa</p>
             </div>
          </div>
-         <div id="tutorial">
+<!--          <div id="tutorial">
             <div id="tutorialBoton" onclick="tutorial_Boton()" class="tutorialBoton">
                <img class="imgtutorial" id="imgtutorial" src="img/tutorialAmarillo.svg">
             </div>
-         </div>
+         </div> -->
       </div>
-      <div class="barraSuperior">
+      <div class="barraSuperior" id="fons_barra">
          <img id="logoCora" onclick="mostrar(1)" src="img/A.gif">
          <div class="ajustesMenu">
             <img id="ajustes" src="img/ajustes.png" alt="ajustaments"> 
