@@ -8,7 +8,7 @@ function modo_Oscuro() {
    if (clar) {
       document.getElementById("fons_barra").style.backgroundImage = "url('img/fonss_o.svg')";
       document.documentElement.style.setProperty("--colorFondoAzul", "#008ba6");
-      document.documentElement.style.setProperty("--colorFondoTaronja", "#b07a14");
+      document.documentElement.style.setProperty("--colorFondoTaronja", "#734c04");
       document.documentElement.style.setProperty("--colorFondo", "#222222");
       document.documentElement.style.setProperty("--colorTexto", "#f1eff1");
       document.documentElement.style.setProperty("--cursorPuntero", "url(../img/punteroBlanco.png), auto");
@@ -27,7 +27,7 @@ function modo_Oscuro() {
    } else {
       document.getElementById("fons_barra").style.backgroundImage = "url('img/fonss.svg')";
       document.documentElement.style.setProperty("--colorFondoAzul", "#70C7E0");
-      document.documentElement.style.setProperty("--colorFondoTaronja", "#e7ac3c");
+      document.documentElement.style.setProperty("--colorFondoTaronja", "#e49a0e");
       document.documentElement.style.setProperty("--colorFondo", "#F4F4F4");
       document.documentElement.style.setProperty("--colorTexto", "#000000");
       document.documentElement.style.setProperty("--cursorPuntero", "url(../img/punteroNegro.png), auto");

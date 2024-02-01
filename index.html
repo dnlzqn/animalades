@@ -9,7 +9,8 @@
       <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" integrity="sha512-Ic9xkERjyZ1xgJ5svx3y0u3xrvfT/uPkV99LBwe68xjy/mGtO+4eURHZBW2xW4SZbFrF1Tf090XqB+EVgXnVjw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
       <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-      <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300&display=swap" rel="stylesheet">
+      <!--<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300&display=swap" rel="stylesheet">-->
+      <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;700&family=IBM+Plex+Serif:wght@300;700&display=swap" rel="stylesheet">
       <link rel="icon" type="image/png" href="img/favi.png">
    </head>
    <body>
@@ -26,7 +27,7 @@
          <p class="opcMenu" onclick="mostrar(3);"><strong>Capítol 3. Excursió al zoo</strong></p>
          <p class="opcMenu" onclick="mostrar(4);"><strong>Capítol 4. M’encanta l’ordre alfabètic</strong></p>
          <p class="opcMenu" onclick="mostrar(5);"><strong>Capítol 5. El grill</strong></p>
-         <p class="opcMenu" onclick="mostrar(6);"><strong>Capítol 6. El cargo</strong></p>
+         <p class="opcMenu" onclick="mostrar(6);"><strong>Capítol 6. El cargol</strong></p>
          <p class="opcMenu" onclick="mostrar(7);"><strong>Capítol 7. El pingüí emperador</strong></p>
          <p class="opcMenu" onclick="mostrar(8);"><strong>Capítol 8. Pregadéu</strong></p>
          <p class="opcMenu" onclick="mostrar(9);"><strong>Capítol 9. El paó</strong></p>
@@ -46,9 +47,15 @@
          <p class="ajustaments_p">Aquí pots activar el mode fosc per llegir a la nit o en llocs amb poca llum.</p>
          <div id="ClaroOscuro" onclick="modo_Oscuro()" class="ClaroOscuro">
             <div class="bloqueApartadosAjustes">
-               <div class="blanco"></div>
+               <div class="ajust_d">
+                  <div class="blanco"></div>
+                  <p>Mode clar</p>
+               </div>
                <img class="imgClaroOscuro" id="IMGclaroActivado" src="img/claroActivado.svg">
-               <div class="negre"></div>
+               <div class="ajust_d">
+                  <div class="negre"></div>
+                  <p>Mode fosc</p>
+               </div>
             </div>
          </div>
          <br>
@@ -56,21 +63,34 @@
          <p class="ajustaments_p">Aquí pots canviar la forma de les lletres.</p>
          <div id="EstiloTipo" onclick="Estilo_Tipo()" class="EstiloTipo">
             <div class="bloqueApartadosAjustes">
-               <div id="tipo1">
+               <div class="ajust_d">
                   <p id="letra1">Aa </p>
+                  <p>Lletra de pal</p>
                </div>
                <img class="imgClaroOscuro" id="IMGestiloActivado" src="img/estiloActivado.svg">
-               <p id="letra2">Aa </p>
+               <div class="ajust_d">
+                  <p id="letra2">Aa </p>
+                  <p>Lletra calçada</p>
+               </div>
             </div>
          </div>
          <p class="titulo"><strong>Mida de lletra</strong></p>
          <p class="ajustaments_p">Aquí pots canviar la mida de les lletres.</p>
          <div id="MedidaTipo" onclick="Medida_Tipo()" class="MedidaTipo">
+            
+
             <div class="bloqueApartadosAjustes">
-               <p id="mida1">Aa</p>
+               <div class="ajust_d">
+                  <p id="mida1">Aa </p>
+                  <p>Lletra petita</p>
+               </div>
                <img class="imgClaroOscuro" id="IMGpequeActivado" src="img/pequeActivado.svg">
-               <p id="mida2">Aa</p>
+               <div class="ajust_d">
+                  <p id="mida2">Aa </p>
+                  <p>Lletra gran</p>
+               </div>
             </div>
+
          </div>
 <!--          <div id="tutorial">
             <div id="tutorialBoton" onclick="tutorial_Boton()" class="tutorialBoton">
@@ -135,9 +155,33 @@
                </div>
             </section>
             <div class="c1scroll">
+                <div class="column-row">
+                  <div class="parrafos">
+                     <h2>Introducció</h2>
+                     <p>Entenem que la lectura és una eina bàsica per al domini del llenguatge, que ens capacita per entendre’l i que aquest coneixement és essencial per a la nostra participació activa en la societat. És des d’aquesta necessitat i comptant amb l’experiència dels Centres d’Educació Especial de la Diputació de Tarragona, d’on sorgeix la proposta de crear una col·lecció de Lectura Fàcil.</p>
+                     <p>Entendre és bàsic per decidir. Cal donar, doncs, accés a la formació i a la informació a un col·lectiu, que es calcula en un 30%, que per motius diversos (deficient escolarització, dislèxia, discapacitat intel·lectual, immigració, senilitat...) té dificultats per accedir a la lectura.</p> 
+                     <p>Aquest primer volum vol donar eines als futurs lectors per facilitar la compressió i la participació en la vida cultural del seu entorn. Ha estat fruit d’un treball col·laboratiu de l’autora Judit Robert, l’il·lustrador Xavier Huguet i de les professores de l’Escola Alba, Susanna Giner i Teresa Mateu, que han adaptat el text, juntament amb la participació de l’Associació Lectura Fàcil. A tots ells volem agrair la predisposició i la il·lusió que han dipositat en aquest projecte.</p>
+                  </div>
+               </div>
+               <div class="botonsCapitols">
+                  <div class="botoCapRoculto">
+                     <h3 id="flexa">←</h3>
+                     <h3>Anterior</h3>
+                  </div>
+                  <div class="botoCapR" onclick="mostrar(2)">
+                     <h3>Capítol 1 </h3>
+                     <h3 id="flexa">→</h3>
+                  </div>
+               </div>
+            </div>
+         </article>
+
+
+<article class="capitols" id="capitol2">
+            <div class="c1">
                <div class="column-row">
                   <div class="parrafos">
-                     <h2><span style="font-size: 70%;">Capítol 1.</span> Per què jo?</h2>
+                     <h2><span style="font-size: 70%;">Capítol 1</span> <br>Per què jo?</h2>
                      <p>Fer-se gran és un rotllo. Un rotllo de veritat.
                         <br>Quan ets un nen tothom t’ajuda.
                         <br>Si no fas bé les coses no passa res.
@@ -151,7 +195,7 @@
                      </p>
                      <p>I a sobre, comences a fixar-te en les noies.
                         <br>Les noies són unes persones a qui tampoc no entens.
-                        <br>Tenen cara d’angelets, però només saben riure’s dels altres <br>i fer-te sentir vergonya.
+                        <br>Tenen cara d’angelets, <br>però només saben riure’s dels altres <br>i fer-te sentir vergonya.
                         <br>Així que el teu món, de cop i volta, es complica.
                      </p>
                      <p>Fer-se gran és un rotllo!</p>
@@ -188,7 +232,7 @@
                </div>
                <div class="column-row">
                   <div class="parrafos">
-                     <p>—Abaixa el volum! Estic estudiant! –crida la meva germana.</p>
+                     <p>—Abaixa el volum! Estic estudiant! —crida la meva germana.</p>
                      <p>—Calla! Deixa’m! —li contesto jo.</p>
                      <p>—Hauries d’estudiar! —em diu.</p>
                      <p>La meva germana és la senyoreta perfecta.
@@ -202,12 +246,12 @@
                   <img id="imgCapitols" src="img/c1-(4).png" alt="La germana de Pau aquesta asseguda en el seu escriptori estudiant.">
                </div>
                <div class="botonsCapitols">
-                  <div class="botoCapRoculto">
+                  <div class="botoCapL" onclick="mostrar(1)">
                      <h3 id="flexa">←</h3>
-                     <h3>Anterior</h3>
+                     <h3>Inici</h3>
                   </div>
-                  <div class="botoCapR" onclick="mostrar(2)">
-                     <h3>Capítol 2 </h3>
+                  <div class="botoCapR" onclick="mostrar(3)">
+                     <h3>Capítol 2</h3>
                      <h3 id="flexa">→</h3>
                   </div>
                </div>
@@ -218,7 +262,7 @@
             <div class="c1">
                <div class="column-row">
                   <div class="parrafos">
-                     <h2><span style="font-size: 70%;">Capítol 2.</span> Del mal a pitjor</h2>
+                     <h2><span style="font-size: 70%;">Capítol 2</span> <br>Del mal a pitjor</h2>
                      <p>Els primers dies a l'institut són complicats.
                         <br>Em sento com un <strong id="destacadahover" onclick="destacar(0)">pigmeu</strong> ple de grans.
                         <br>Tothom em mira pel passadís.
@@ -234,8 +278,8 @@
                   <div class="parrafos">
                      <p>—Soler, surti a la pissarra-la mestra de matemàtiques, em crida.</p>
                      <p>—Vinga!Espavila!-diu el noi assegut darrere meu.</p>
-                     <p>—Com resoldries el problema de la pissarra? -em pregunta <br>la professora.</p>
-                     <p>—Jo aplicaria el <strong id="destacadahover" onclick="destacar(1)">mínim comú múltiple</strong>-responc.</p>
+                     <p>—Com resoldries el problema de la pissarra? -em pregunta la professora.</p>
+                     <p>—Jo aplicaria el <strong id="destacadahover" onclick="destacar(1)">mínim comú múltiple</strong> -responc.</p>
                      <p>Començo a resoldre el problema a la pissarra.
                         <br>Mentrestant, la mestra va explicant la lliçó.
                         <br>En acabar el problema, es gira cap a mi i em diu:
@@ -254,7 +298,7 @@
                         <br>Els ulls se m’omplen de llàgrimes i premo els punys.
                         <br>Tinc ganes de plorar de ràbia!
                      </p>
-                     <p>—Ei, estàs bé?—em pregunta algú.</p>
+                     <p>—Ei, estàs bé? —em pregunta algú.</p>
                      <p>Em giro de costat, <br>i veig la noia més meravellosa del món.
                      </p>
                   </div>
@@ -289,7 +333,7 @@
             <div class="c1">
                <div class="column-row">
                   <div class="parrafos">
-                     <h2><span style="font-size: 70%;">Capítol 3.</span> Excursió al zoo</h2>
+                     <h2><span style="font-size: 70%;">Capítol 3</span> <br>Excursió al zoo</h2>
                      <p>Aquest primer trimestre anirem d’excursió al zoo.
                         <br>En Toni, el professor de ciències naturals, vol motivar-nos.
                         <br>Creu que així aprendrem més coses sobre els animals.
@@ -352,7 +396,7 @@
             <div class="c1">
                <div class="column-row">
                   <div class="parrafos">
-                     <h2><span style="font-size: 70%;">Capítol 4.</span> M'encanta l'ordre alfabètic</h2>
+                     <h2><span style="font-size: 70%;">Capítol 4</span> <br>M'encanta l'ordre alfabètic</h2>
                      <p>Arriba el dia de l’excursió al zoo.
                         <br>Tota la classe està a punt per pujar a l’autobús.
                         <br>Tothom sap al costat de qui s’asseurà durant el viatge.
@@ -422,7 +466,7 @@
             <div class="c1">
                <div class="column-row">
                   <div class="parrafos">
-                     <h2><span style="font-size: 70%;">Capítol 5.</span> El grill</h2>
+                     <h2><span style="font-size: 70%;">Capítol 5</span> <br>El grill</h2>
                      <p>El professor de ciències explica que tots els animals <br>tenen diferents maneres de trobar parella.
                         <br>Jo prenc apunts al meu quadern.
                      </p>
@@ -511,7 +555,7 @@
             <div class="c1">
                <div class="column-row">
                   <div class="parrafos">
-                     <h2><span style="font-size: 70%;">Capítol 6.</span> El cargol</h2>
+                     <h2><span style="font-size: 70%;">Capítol 6</span> <br>El cargol</h2>
                      <p>Durant uns dies tota la classe fa pudor del meu perfum.
                         <br>També casa meva, la meva roba, el sofà...
                         <br>Quina maledicció! Tot em fa pensar en el meu primer fracàs.
@@ -605,7 +649,7 @@
             <div class="c1">
                <div class="column-row">
                   <div class="parrafos">
-                     <h2><span style="font-size: 70%;">Capítol 7.</span> El pingüí emperador</h2>
+                     <h2><span style="font-size: 70%;">Capítol 7</span> <br>El pingüí emperador</h2>
                      <p>Aquella setmana estic molt desanimat.
                         <br>Em sento culpable, he llençat un dard al cul de la Carla!
                         <br>Com he estat tan ruc?
@@ -720,7 +764,7 @@
             <div class="c1">
                <div class="column-row">
                   <div class="parrafos">
-                     <h2><span style="font-size: 70%;">Capítol 8.</span> Pregadéu</h2>
+                     <h2><span style="font-size: 70%;">Capítol 8</span> <br>Pregadéu</h2>
                      <p>Avui tinc molts deures.
                         <br>Obro el llibre de naturals per la pàgina dels insectes.
                         <br>M’agraden molt.
@@ -796,7 +840,7 @@
             <div class="c1">
                <div class="column-row">
                   <div class="parrafos">
-                     <h2><span style="font-size: 70%;">Capítol 9.</span> El paó</h2>
+                     <h2><span style="font-size: 70%;">Capítol 9</span> <br>El paó</h2>
                      <p>Després d’aquest malson <br>ja no tinc tantes ganes de besar la Carla.
                      </p>
                      <p>Quan entro a classe la miro, però ja no em sembla un àngel.
@@ -882,7 +926,7 @@
             <div class="c1">
                <div class="column-row">
                   <div class="parrafos">
-                     <h2><span style="font-size: 70%;">Capítol 10.</span> El gos</h2>
+                     <h2><span style="font-size: 70%;">Capítol 10</span> <br>El gos</h2>
                      <p>Vull recuperar l’amor de la Carla.
                         <br>Però com es recupera una cosa que no s’ha tingut mai?
                         <br>Tant se val! Torno a estar molt trist.
@@ -1018,7 +1062,7 @@
             <div class="c1">
                <div class="column-row">
                   <div class="parrafos">
-                     <h2><span style="font-size: 70%;">Capítol 11.</span> L’hipopòtam</h2>
+                     <h2><span style="font-size: 70%;">Capítol 11</span> <br>L’hipopòtam</h2>
                      <p>El curs avança, jo estic distret a classe i trec males notes.
                         <br>Els meus pares van a parlar amb el meu tutor
                         <br>Però els diu que no es preocupin, <br>que és l’edat i que estic en ple canvi hormonal.
@@ -1102,7 +1146,7 @@
             <div class="c1">
                <div class="column-row">
                   <div class="parrafos">
-                     <h2><span style="font-size: 70%;">Capítol 12.</span> El cavallet de mar</h2>
+                     <h2><span style="font-size: 70%;">Capítol 12</span> <br>El cavallet de mar</h2>
                      <p>M’han expulsat 15 dies de l’institut.
                         <br>El director em recomana que vagi al psicòleg de l’institut.
                         <br>Des de casa vaig fent els deures <br>que els professors m’envien per correu electrònic.
@@ -1170,7 +1214,7 @@
             <div class="c1">
                <div class="column-row">
                   <div class="parrafos">
-                     <h2><span style="font-size: 70%;">Capítol 13.</span> El dofí</h2>
+                     <h2><span style="font-size: 70%;">Capítol 13</span> <br>El dofí</h2>
                      <p>Cada dilluns tinc sessió amb en Lluís, el psicòleg.
                         <br>Era un bon home i les nostres xerrades m’agraden.
                         <br>Ja no em distrec tant a classe i les notes estan millorant.
@@ -1300,7 +1344,7 @@
             <div class="c1">
                <div class="column-row">
                   <div class="parrafos">
-                     <h2><span style="font-size: 70%;">Capítol 14.</span> El cérvol </h2>
+                     <h2><span style="font-size: 70%;">Capítol 14</span> <br>El cérvol </h2>
                      <p>M’agradava formar part de l’equip d’escacs.
                         <br>A poc a poc vaig començar a conèixer altres alumnes.
                         <br>Fins i tot un dia en Quique, el xulet, em va dir:
@@ -1420,7 +1464,7 @@
             <div class="c1">
                <div class="column-row">
                   <div class="parrafos">
-                     <h2><span style="font-size: 70%;">Capítol 15.</span> L’au del paradís</h2>
+                     <h2><span style="font-size: 70%;">Capítol 15</span> <br>L’au del paradís</h2>
                      <p>Ja som al tercer trimestre, i el curs està a punt d’acabar.
                         <br>Tinc poques ganes de treballar.
                         <br>Només penso en les vacances.
@@ -1593,5 +1637,56 @@
         <script src="js/ajustaments.js"></script>
         <script src="js/mode_fosc.js"></script>
         <script src="js/funcionalitats.js"></script>
+        
+        <script>
+        // Función para dividir el texto en líneas con un máximo de caracteres
+        function dividirTexto(texto, maxCaracteres) {
+            var palabras = texto.split(' ');
+            var linea = '';
+            var lineas = [];
+
+            palabras.forEach(function(palabra) {
+                // Comprobar si la longitud actual de la línea más la palabra y un espacio excede el límite de caracteres
+                if ((linea + palabra + ' ').length > maxCaracteres) {
+                    lineas.push(linea.trim()); // Agregar la línea actual a la lista de líneas
+                    linea = ''; // Restablecer la línea actual para la siguiente palabra
+                }
+                linea += palabra + ' '; // Agregar la palabra y un espacio a la línea actual
+            });
+
+            // Agregar la última línea
+            lineas.push(linea.trim());
+
+            return lineas.join('<br>'); // Unir las líneas con <br>
+        }
+
+        // Función para dividir el texto de todos los párrafos si el contenedor es lo suficientemente ancho
+        function dividirTextosSiEsAnchoSuficiente() {
+            var contenedor = document.querySelector('.parrafos');
+            var contenedorAncho = contenedor.clientWidth;
+            var textoParrafos = contenedor.querySelectorAll('.parrafos p');
+
+            if (contenedorAncho > 65 * 10) { // 65 caracteres * 10 palabras (aprox. 10 palabras por línea)
+                textoParrafos.forEach(function(parrafo) {
+                    var textoParrafo = parrafo.textContent;
+                    var textoDividido = dividirTexto(textoParrafo, 65); // Cambiar a 70 si lo deseas
+                    parrafo.innerHTML = textoDividido;
+                });
+            } else {
+                // Restaurar el texto original si el contenedor no es lo suficientemente ancho
+                textoParrafos.forEach(function(parrafo) {
+                    parrafo.innerHTML = parrafo.textContent;
+                });
+            }
+        }
+
+        // Dividir los textos inicialmente al cargar la página
+        dividirTextosSiEsAnchoSuficiente();
+
+        // Añadir un listener para el evento de cambio de tamaño de la ventana
+        window.addEventListener('resize', function() {
+            dividirTextosSiEsAnchoSuficiente(); // Dividir los textos cuando cambie el tamaño de la ventana
+        });
+      </script>
    </body>
 </html>

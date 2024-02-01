@@ -50,7 +50,8 @@ function Estilo_Tipo() {
 
    if (clar) {
 
-      document.documentElement.style.setProperty("--estiloTexto", 'Merriweather, serif');
+      //document.documentElement.style.setProperty("--estiloTexto", 'Merriweather, serif');
+      document.documentElement.style.setProperty("--estiloTexto", 'IBM Plex Serif, serif');
 
       clar = false;
       elemento.src = "img/sinestiloActivado.svg"; // Cambiar a imagen de modo oscuro
