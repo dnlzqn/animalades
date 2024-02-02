@@ -202,9 +202,10 @@
      height: 2rem;
      cursor: var(--cursorHover);
 }
- .ajustesMenu img {
-     width: 1.5rem;
-     cursor: pointer;
+ .ajustesMenu svg {
+    height: 2rem;
+    width: 4rem;     
+    cursor: pointer;
 }
  .degradadoSuperiror {
      width: 100vw;
@@ -230,6 +231,11 @@
      padding-right: 1vw;
      align-items: center;
 }
+
+.ajustesMenu svg {
+    height: 2rem;
+}
+
  .botoCap3R {
      width: 35vw;
      height: 5vh;
@@ -239,6 +245,7 @@
      padding: 0 4vw;
      flex-direction: row;
      justify-content: space-between;
+}
 }
  .botoCap1L {
      width: 35vw;
