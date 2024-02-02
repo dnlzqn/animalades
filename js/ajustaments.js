@@ -30,8 +30,8 @@ document.addEventListener('click', (event) => {
 
    if (clickedOutsideMenuCapitulos && clickedOutsideAjustes) {
       // Cierra .menuCapitulos y .ajustes
-      menuCapitulos.style.right = '-22rem';
-      ajustes.style.right = '-24rem';
+      //menuCapitulos.style.right = '-22rem';
+      //ajustes.style.right = '-24rem';
 
       // Restaura el estilo de los capítulos
       capitulos.forEach(capitulo => {
