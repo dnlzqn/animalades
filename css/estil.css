@@ -73,10 +73,10 @@
      color: var(--colorTexto);
 }
 
- .barraSuperior {
+/* .barraSuperior {
      width: 100%;
      height: 2rem;
-     padding: 2rem;
+     padding: 2rem 1.3rem;
      display: flex;
      align-items: center;
      column-gap: 2vw;
@@ -87,7 +87,28 @@
      background-image: url('../img/fonss.svg');
      background-size: 100% 100%;
      background-repeat: no-repeat;
+}*/
+
+.barraSuperior {
+    position: relative;
+     width: 100%;
+     height: 4rem;
+     display: flex;
+     position: fixed;
+     top: 0;
+     z-index: 6;
 }
+
+.barraSuperior nav{
+    padding: 1rem;
+    position: absolute;
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
  #capitols {
      width: 100vw;
      display: flex;
@@ -178,6 +199,7 @@
 }
  #logoCora {
      width: 1.8rem;
+     height: 2rem;
      cursor: var(--cursorHover);
 }
  .ajustesMenu img {
@@ -202,7 +224,6 @@
 }
  .ajustesMenu {
      width: 7rem;
-     height: 6rem;
      display: flex;
      column-gap: 2rem;
      justify-content: flex-end;
@@ -376,8 +397,8 @@
  .c1scroll {
      width: 100%;
      padding-top: 4rem;
-     padding-left: 5%;
-     padding-right: 5%;
+/*     padding-left: 2.5%;
+     padding-right: 2.5%;*/
 }
  .menuCapitulos {
      width: 20rem;
@@ -402,6 +423,7 @@
 }
  .parrafos {
      width: 100%;
+     padding: 0 3%;
 }
  h2 {
      color: var(--colorTexto);
@@ -554,7 +576,6 @@
      height: 5vh;
 }
  #letra2 {
-     width: 10vw;
      height: 5vh;
      margin: 0vh;
      font-size: 32px;
@@ -789,8 +810,8 @@
  .c1 {
      width: 100%;
      padding-top: 8rem;
-     padding-left: 5%;
-     padding-right: 5%;
+/*     padding-left: 2.5%;
+     padding-right: 2.5%;*/
 }
  #ajustes {
      cursor: var(--cursorHover);
