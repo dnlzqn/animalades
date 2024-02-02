@@ -6,9 +6,8 @@ function modo_Oscuro() {
 
 
    if (clar) {
-      document.getElementById("fons_barra").style.backgroundImage = "url('img/fonss_o.svg')";
       document.documentElement.style.setProperty("--colorFondoAzul", "#008ba6");
-      document.documentElement.style.setProperty("--colorFondoTaronja", "#734c04");
+      document.documentElement.style.setProperty("--colorFondoTaronja", "#bf7c00");
       document.documentElement.style.setProperty("--colorFondo", "#222222");
       document.documentElement.style.setProperty("--colorTexto", "#f1eff1");
       document.documentElement.style.setProperty("--cursorPuntero", "url(../img/punteroBlanco.png), auto");
@@ -20,12 +19,16 @@ function modo_Oscuro() {
       document.documentElement.style.setProperty("--cora5", "url(../img/cora5vnegro.svg)");
       document.documentElement.style.setProperty("--colorFelicitats", "#f1eff1");
 
+      let imagenesArticulos = document.querySelectorAll('article:not(#capitol1) img');
+        imagenesArticulos.forEach(function(img) {
+            img.style.opacity = "0.8";
+        });
+
 
       clar = false;
       elemento.src = "img/oscuroActivado.svg"; // Cambiar a imagen de modo oscuro
 
    } else {
-      document.getElementById("fons_barra").style.backgroundImage = "url('img/fonss.svg')";
       document.documentElement.style.setProperty("--colorFondoAzul", "#70C7E0");
       document.documentElement.style.setProperty("--colorFondoTaronja", "#e49a0e");
       document.documentElement.style.setProperty("--colorFondo", "#F4F4F4");
@@ -39,6 +42,10 @@ function modo_Oscuro() {
       document.documentElement.style.setProperty("--cora5", "url(../img/cora5.svg)");
       document.documentElement.style.setProperty("--colorFelicitats", "#C80062");
 
+      let imagenesArticulos = document.querySelectorAll('article:not(#capitol1) img');
+        imagenesArticulos.forEach(function(img) {
+            img.style.opacity = "1"; // Restaurar la opacidad a 1 (completamente visible)
+        });
 
       clar = true;
       elemento.src = "img/claroActivado.svg"; // Cambiar a imagen de modo claro
