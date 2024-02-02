@@ -21,7 +21,7 @@ function modo_Oscuro() {
 
       let imagenesArticulos = document.querySelectorAll('article:not(#capitol1) img');
         imagenesArticulos.forEach(function(img) {
-            img.style.opacity = "0.8";
+            img.style.opacity = "0.6";
         });
 
 
