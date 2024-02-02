@@ -752,7 +752,7 @@
      width: 130rem;
      height: 55%;
      position: absolute;
-     bottom: 0rem;
+     bottom: -1rem;
      right: 0rem;
      z-index: 1;
 }
