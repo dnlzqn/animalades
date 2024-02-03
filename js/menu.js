@@ -3,6 +3,8 @@ const capitulos = document.querySelectorAll('.capitols');
 const menuButton = document.getElementById('menu');
 const cruzButton = document.getElementById('cruz');
 
+let menuCapitulosAbierto = false;
+
 function mostrar(numCap) {
    // Ocultamos todos los capítulos
    let todosCaps = document.querySelectorAll(".capitols");
@@ -17,6 +19,7 @@ function mostrar(numCap) {
 
    window.scrollTo(0, 0);
    menuCapitulos.style.right = '-25rem';
+   menuCapitulosAbierto = false;
 
    // Iterar sobre cada elemento en la NodeList capitulos
    capitulos.forEach(capitulo => {
@@ -30,13 +33,12 @@ function mostrar(numCap) {
 // Abre el menú cuando se hace clic en el botón de menú
 menuButton.addEventListener('click', () => {
    menuCapitulos.style.right = '0rem';
-
+   menuCapitulosAbierto = true;
    // Aplicar el filtro blur con una transición
    capitulos.forEach(capitulo => {
       capitulo.style.filter = "blur(10px)";
       capitulo.style.transition = "filter 0.2s ease"; // Transición de 0.2 segundos
    });
-
    // Bloquear el scroll al abrir el menú
    document.body.style.overflow = "hidden";
 });
@@ -44,7 +46,7 @@ menuButton.addEventListener('click', () => {
 // Cierra el menú cuando se hace clic en el botón de cruz
 cruzButton.addEventListener('click', () => {
    menuCapitulos.style.right = '-25rem';
-
+   menuCapitulosAbierto = false;
    // Remover el filtro blur con una transición
    capitulos.forEach(capitulo => {
       capitulo.style.filter = 'none';
@@ -55,17 +57,25 @@ cruzButton.addEventListener('click', () => {
    document.body.style.overflow = "auto";
 });
 
-// Cierra el menú si se hace clic fuera de él o de su botón de apertura
+
+// Agregar un event listener al documento para detectar clics en cualquier parte de la página
 document.addEventListener('click', (event) => {
-   if (!menuCapitulos.contains(event.target) && event.target !== menuButton) {
-      menuCapitulos.style.right = '-25rem';
+    // Verificar si el menú está visible (menuCapitulos.style.right === '0rem')
+    if (menuCapitulos.style.right === '0rem') {
+        // Verificar si el clic no ocurrió dentro del contenedor del menú
+        if (!menuCapitulos.contains(event.target) && event.target !== menuButton) {
+            // Cerrar el menú estableciendo style.right en -25rem
+            menuCapitulos.style.right = '-25rem';
 
-      // Remover el filtro blur con una transición
-      capitulos.forEach(capitulo => {
-         capitulo.style.filter = 'none';
-         capitulo.style.transition = "filter 0.2s ease"; // Transición de 0.2 segundos
-      });
+            // Remover el filtro blur con una transición
+            capitulos.forEach(capitulo => {
+                capitulo.style.filter = 'none';
+                capitulo.style.transition = "filter 0.2s ease"; // Transición de 0.2 segundos
+            });
 
-      document.body.style.overflow = "auto";
-   }
+            // Permitir el scroll al cerrar el menú
+            document.body.style.overflow = "auto";
+        }
+    }
 });
+
