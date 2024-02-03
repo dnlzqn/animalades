@@ -2,7 +2,7 @@ const ajustes = document.querySelector('.ajustes');
 const ajustesButton = document.getElementById('ajustes');
 const cruz2Button = document.getElementById('cruz2');
 
-ajustes.style.right = '-24rem';
+//ajustes.style.right = '-24rem';
 let ajustesAbierto = false;
 
 // Abre ajustes cuando se hace clic en el botón de ajustes

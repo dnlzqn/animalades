@@ -1,3 +1,5 @@
+//hola
+
 const menuCapitulos = document.querySelector('.menuCapitulos');
 const capitulos = document.querySelectorAll('.capitols');
 const menuButton = document.getElementById('menu');
@@ -57,25 +59,4 @@ cruzButton.addEventListener('click', () => {
    document.body.style.overflow = "auto";
 });
 
-
-// Agregar un event listener al documento para detectar clics en cualquier parte de la página
-document.addEventListener('click', (event) => {
-    // Verificar si el menú está visible (menuCapitulos.style.right === '0rem')
-    if (menuCapitulos.style.right === '0rem') {
-        // Verificar si el clic no ocurrió dentro del contenedor del menú
-        if (!menuCapitulos.contains(event.target) && event.target !== menuButton) {
-            // Cerrar el menú estableciendo style.right en -25rem
-            menuCapitulos.style.right = '-25rem';
-
-            // Remover el filtro blur con una transición
-            capitulos.forEach(capitulo => {
-                capitulo.style.filter = 'none';
-                capitulo.style.transition = "filter 0.2s ease"; // Transición de 0.2 segundos
-            });
-
-            // Permitir el scroll al cerrar el menú
-            document.body.style.overflow = "auto";
-        }
-    }
-});
 

@@ -77,11 +77,12 @@ p a {
 #portada {
     position: relative;
     width: 100vw;
+    height: 90dvh;
     background: var(--colorFondoAzul);
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: end;
     margin-bottom: 3rem;
 }
 
@@ -89,7 +90,7 @@ p a {
     font-family: var(--estiloTexto);
      font-size: var(--medidaTexto-h2);
     position: absolute;
-    bottom: 15dvh;
+    bottom: 15vh;
     z-index: 1;
     border: none; 
   color: white; 
@@ -105,15 +106,18 @@ p a {
 
 #portada .portada-sup {
     width: 100vw;
+        display: flex;
+    flex-direction: column;
 
 }
 
 .portada-sup .titol {
-    padding: 1rem 1rem 0;
+    margin: 1rem 1rem 0;
 }
 
 
 #nenInici {
+    width: 100%;
     display: flex;
     flex-direction: column;
     margin: 0 auto;
@@ -122,7 +126,7 @@ p a {
 
 #nen {
     margin: 0 auto;
-    max-width: 90vw;
+    max-width: 75vw;
 }
 
 #nenInici svg {
@@ -193,7 +197,7 @@ p a {
     flex-direction: column;
     align-items: center;
     position: absolute;
-    bottom: -80px;
+    bottom: -104px;
 }
 
 .portada_logos .logos {
@@ -323,6 +327,8 @@ p a {
      margin-bottom: 52px;
 }
 
+
+
  #carga {
      width: 10rem;
      height: 10rem;
@@ -345,7 +351,7 @@ p a {
      height: 20vh;
 }
  .botonsCapitols {
-     width: 100%;
+     width: 90%;
      display: flex;
      justify-content: center;
      column-gap: var(--column-gap);
@@ -353,6 +359,10 @@ p a {
      font-family: var(--estiloTexto);
      padding-right: 0rem;
      padding-left: 0rem;
+     margin: 0 auto;
+ }
+ .botonsCapitols h3{
+     font-weight: 600;
 }
  .botoCap2 {
      width: 35vw;
@@ -426,7 +436,7 @@ p a {
      padding-right: 4vw;
 }
  .botoCapL {
-     width: 11rem;
+     width: 14rem;
      height: 3rem;
      background-color: #70C7E0;
      display: flex;
@@ -434,11 +444,11 @@ p a {
      padding: 1rem;
      flex-direction: row;
      justify-content: space-between;
-     border-radius: 5px;
+     border-radius: 25px 5px 5px 25px;
      cursor:var(--cursorHover);
 }
  .botoCapR {
-     width: 11rem;
+     width: 14rem;
      height: 3rem;
      background-color: #70C7E0;
      display: flex;
@@ -446,7 +456,7 @@ p a {
      padding: 1rem;
      flex-direction: row;
      justify-content: space-between;
-     border-radius: 5px;
+     border-radius: 5px 25px 25px 5px;
      cursor: var(--cursorHover);
 }
  #flexa {
@@ -570,9 +580,16 @@ p a {
  #menu {
      cursor: var(--cursorHover);
 }
+
+.poema {
+    text-align: center;
+    margin: 2.5rem 0;
+}
+
  .c1scroll {
      width: 100%;
      padding-top: 7rem;
+}
 /*     padding-left: 2.5%;
      padding-right: 2.5%;*/
 }
@@ -588,8 +605,13 @@ p a {
      width: 100%;
      padding: 0 3%;
 }
+
+.parrafos h2 {
+    margin-top: 0;
+}
  h2 {
      color: var(--colorTexto);
+}
 }
  menuCapitulos {
      margin: 0;
@@ -608,7 +630,7 @@ p a {
 
  .menuCapitulos {
      width: 20rem;
-     height: 100vh;
+     height: 100dvh;
     background-color: var(--colorFondoTaronja);
      z-index: 7;
      padding: 1rem;
@@ -621,7 +643,7 @@ p a {
 
  .ajustes {
      width: 20rem;
-     height: 100vh;
+     height: 100dvh;
      background-color: var(--colorFondoTaronja);
      z-index: 7;
      padding: 1rem;
@@ -716,7 +738,7 @@ p a {
 }
 
 .ajust_d p{
-    font-size:0.8em;
+    font-size: calc(var(--medidaTexto-p)*.8);
     margin: 0;
 }
 
@@ -733,11 +755,11 @@ p a {
  #letra1 {
      height: 5vh;
      margin: 0vh;
-     font-size: 32px;
+     font-size: calc(var(--medidaTexto-p)*2);
      align-items: center;
      font-family: 'IBM Plex Sans', sans-serif;
      display: flex;
-    margin-bottom: -9px;
+    margin-bottom: -3px;
 }
  #check1 {
      width: 5vw;
@@ -762,11 +784,11 @@ p a {
  #letra2 {
      height: 5vh;
      margin: 0vh;
-     font-size: 32px;
+     font-size: calc(var(--medidaTexto-p)*2);
      align-items: center;
      font-family: 'Merriweather', serif;
      display: flex;
-     margin-bottom: -9px;
+     margin-bottom: -3px;
 }
  #check2 {
      width: 5vw;
@@ -787,7 +809,7 @@ p a {
      width: 5rem;
      line-height: 2;
      margin: 0vh;
-     font-size: 17px;
+     font-size: calc(var(--medidaTexto-p)*1.5);
      align-items: center;
      justify-content: center;
      font-family: var(--estiloTexto);
@@ -809,7 +831,7 @@ p a {
      width: 5rem;
      line-height: 1.2;
      margin: 0vh;
-     font-size: 32px;
+     font-size: calc(var(--medidaTexto-p)*3);
      justify-content: center;
      align-items: center;
      font-family: var(--estiloTexto);
@@ -945,6 +967,11 @@ p a {
      margin-top: 0px;
      margin-bottom: 0px;
 }
+
+.noimg {
+    width: 67%;
+}
+
  #capitol0 {
      width: 90vw;
      display: block;
@@ -1125,24 +1152,14 @@ p a {
      right: 2vw;
 }
  @media (min-width: 700px) {
-
-    #nen {
-        margin: 0 auto;
-        max-width: 50vw;
-    }
-
-    #portada h1 {
-        font-size: 6rem;
-    }
-
-    #portada h2 {
-        font-size: 3rem;
-        position: relative;
-        top: -17px;
-    }
-
-    .portada-sup .titol {
-        padding: 1rem 5rem 0;
+     .column-row {
+         display: flex;
+         column-gap: 2rem;
+        flex-direction: row-reverse;
+        align-items: flex-start;
+         justify-content: center;
+         max-width: 1020px;
+         margin: 0 auto;
     }
 
      .Animalades {
@@ -1161,11 +1178,9 @@ p a {
     }
 
 
-     .column-row {
-         align-items: center;
-    }
+
      #imgCapitols {
-         width: 25rem;
+         width: 38%;
     }
      #imgCapitolsFinal {
          width: 30rem;
@@ -1175,31 +1190,83 @@ p a {
     }
 }
  @media (min-width: 1395px) {
-     .column-row {
-         display: flex;
-         column-gap: 10rem;
-         flex-direction: row;
-         align-items: center;
-         justify-content: center;
-         max-width: 1020px;
-         margin: 0 auto;
+
+    .botonsCapitols {
+         padding-top: 3rem;
+         padding-bottom: 3rem;
+         column-gap: 4rem;
+         margin: unset;
     }
-     #imgCapitols {
+
+    .btn {
+        bottom: 28vh;
+        left: 14rem;
+    }
+
+    #cB {
+        top: -18%;
+        left: 54%;
+    }
+
+    #cB2 {
+        left: 46%;
+    }
+
+    #cB3 {
+        top: 30%;
+        right: 10%;
+    }
+
+    .portada_logos {
+        width: 50%;
+        bottom: -54px;
+    }
+
+    #nen {
+        margin: 0 auto;
+        max-width: 50vw;
+        position: relative;
+        right: -17rem;
+        top: -7rem;
+    }
+
+    #nenInici {
+/*        top: -18rem;*/
+    }
+
+    #portada h1 {
+        font-size: 8rem;
+    }
+
+    #portada h2 {
+        font-size: 5rem;
+        position: relative;
+        top: -17px;
+    }
+
+    .portada-sup .titol {
+        margin: 17rem 5rem 0;
+        position: relative;
+        top: 30vh;
+    }
+
+    #imgCapitols {
          height: 50%;
-         width: 20rem;
+/*         width: 20rem;*/
          margin-top: 0px;
-         margin-bottom: 0px;
+         margin-bottom: 140px;
     }
+
      .ajustesMenu img {
          width: 2rem;
     }
      #fondoBarra {
          top: -1rem;
     }
-    /* .parrafos {
-         width: 31rem;
+    
+    .parrafos p:first-child {
+         margin-top: 0;
     }
-    */
 
 
      .ajustesMenu {
@@ -1228,11 +1295,7 @@ p a {
          outline: 3px solid #3CA3B7;
         ;
     }
-     .botonsCapitols {
-         padding-top: 3rem;
-         padding-bottom: 3rem;
-         column-gap: 4rem;
-    }
+
 /*     .Animalades {
          top: 19rem;
          display: flex;
@@ -1378,7 +1441,26 @@ p a {
          justify-content: center;
     }
 }
- @media (max-height: 600px) {
+
+
+
+
+
+
+@media only screen and (orientation: landscape) {
+
+    #portada {
+        position: relative;
+        width: 100vw;
+        height: 90dvh;
+        background: var(--colorFondoAzul);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: end;
+        margin-bottom: 3rem;
+    }
+    
      #logoCora {
          width: 1.8rem;
          padding-left: 0rem;
