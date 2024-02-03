@@ -28,7 +28,10 @@
      -moz-box-sizing: inherit;
      box-sizing: inherit;
 }
-
+ * {
+     margin: 0px;
+     padding: 0px;
+}
  .no-scroll {
      overflow: hidden;
 }
@@ -36,7 +39,8 @@
      overflow: hidden;
 }
  body {
-     margin: 0 auto;
+     margin: 0;
+     padding: 0;
      background-color: var(--colorFondo);
      overflow-x: hidden;
      cursor: var(--cursorPuntero);
@@ -68,171 +72,6 @@
      line-height: 1.8;
      margin: 1.3em 0 1.3em 0;
      color: var(--colorTexto);
-}
-
-#portada {
-    position: relative;
-    width: 100vw;
-    background: var(--colorFondoAzul);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-end;
-    margin-bottom: 3rem;
-}
-
-.btn {
-    font-family: var(--estiloTexto);
-     font-size: var(--medidaTexto-h2);
-    position: absolute;
-    bottom: 15dvh;
-    z-index: 1;
-    border: none; 
-  color: white; 
-  padding: 14px 28px; 
-  cursor: pointer; 
-  border-radius: 50px; 
-  background-color: var(--colorFondoTaronja);
-  font-weight: 600;
-}
-
-
-
-
-#portada .portada-sup {
-    width: 100vw;
-
-}
-
-.portada-sup .titol {
-    padding: 1rem 1rem 0;
-}
-
-
-#nenInici {
-    display: flex;
-    flex-direction: column;
-    margin: 0 auto;
-    position: relative;
-}
-
-#nen {
-    margin: 0 auto;
-    max-width: 90vw;
-}
-
-#nenInici svg {
-    position: absolute;
-    left: 0;
-    bottom: -130px;
-}
-
- #fondoo {
-     width: 130rem;
-     height: 55%;
-     position: absolute;
-     bottom: 0rem;
-     right: 0rem;
-     z-index: 1;
-}
-
- #fondoo {
-/*     width: 100%;*/
-     height: 50%;
-     bottom: 1rem;
-}
-
- #cB {
-     width: 2rem;
-     height: 2rem;
-     position: absolute;
-     top: 1%;
-    left: 28%;
-}
- #cB2 {
-     width: 2rem;
-     height: 3rem;
-     position: absolute;
-     top: 38vh;
-     left: 18vw;
-}
- #cB3 {
-     width: 2rem;
-     height: 2rem;
-     position: absolute;
-     top: 30%;
-    right: 10%;
-}
-
-#portada h1 {
-     font-family: var(--estiloTexto);
-     font-size:3rem;
-     line-height: 1.3;
-     color: var(--colorTexto);
-     margin-bottom: 0;
-}
-
-#portada h2 {
-    margin-top: 0;
-    margin-bottom: 0;
-}
-
-#portada p {
-    margin-top: 1em;
-    margin-bottom: 0;
-}
-
-.portada_logos {
-    z-index: 5;
-    width: 90%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: absolute;
-    bottom: -80px;
-}
-
-.portada_logos .logos {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    column-gap: 19%;
-}
-
- #diputacio {
-    width: 10%;
-    flex-grow: 4;
-}
-
- #faro {
-    width: 10%;
-    flex-grow: 1;
-}
-
- #LF {
-    width: 10%;
-    flex-grow: 1;
-}
- .logos {
-     width: 100%;
-     display: flex;
-     justify-content: center;
-     padding-bottom: 3rem;
-     column-gap: 2rem;
-}
-
- .bloqueAnimaladsLogo {
-     width: 100%;
-     height: 70vh;
-     display: flex;
-     justify-content: flex-end;
-     flex-direction: column;
-     grid-row-gap: 1rem;
-     position: absolute;
-     bottom: 0vh;
-     align-items: center;
-     z-index: 2;
 }
 
 /* .barraSuperior {
@@ -298,15 +137,12 @@
     }
 }
  .scroll {
-    position: absolute;
-    bottom: 10px;
+     width: 4rem;
+     height: 4rem;
      background-image: url(../img/scrollTodo.gif);
      background-repeat: no-repeat;
      background-size: contain;
      animation: fade 3s infinite;
-     cursor:var(--cursorHover);
-     height: 4rem;
-    width: 4rem;
 }
  .textCapitols {
      width: 90vw;
@@ -568,7 +404,7 @@
 }
  .c1scroll {
      width: 100%;
-     padding-top: 7rem;
+     padding-top: 4rem;
 /*     padding-left: 2.5%;
      padding-right: 2.5%;*/
 }
@@ -627,12 +463,6 @@
      transition: 1s right;
      overflow-y: auto;
 }
-
-.ajustes h2, .menuCapitulos h2 {
-    margin: 0;
-}
-
-
 
  #cruz2 {
      width: 1rem;
@@ -923,7 +753,52 @@
      flex-direction: column;
      z-index: 3;
 }
-
+ #fondoo {
+     width: 130rem;
+     height: 55%;
+     position: absolute;
+     bottom: 0rem;
+     right: 0rem;
+     z-index: 1;
+}
+ #LF {
+     width: 4.5rem;
+}
+ #Animalades {
+     font-family: 'IBM Plex Sans', sans-serif;
+     font-size:3rem;
+     line-height: 2rem;
+     color: var(--colorTexto);
+}
+ #diputacio {
+     width: 8.5rem;
+}
+ #faro {
+     width: 4.5rem;
+}
+ .logos {
+     width: 100%;
+     display: flex;
+     justify-content: center;
+     padding-bottom: 3rem;
+     column-gap: 2rem;
+}
+ #nenInici {
+     width: 70vw;
+     position: absolute;
+}
+ .bloqueAnimaladsLogo {
+     width: 100%;
+     height: 70vh;
+     display: flex;
+     justify-content: flex-end;
+     flex-direction: column;
+     grid-row-gap: 1rem;
+     position: absolute;
+     bottom: 0vh;
+     align-items: center;
+     z-index: 2;
+}
  .Animalades {
      width: 100%;
      display: flex;
@@ -1059,7 +934,27 @@
      height: 90%;
      background-color: var(--colorFondoAzul);
 }
-
+ #cB {
+     width: 2rem;
+     height: 2rem;
+     position: absolute;
+     top: 56vh;
+     left: 6vw;
+}
+ #cB2 {
+     width: 2rem;
+     height: 3rem;
+     position: absolute;
+     top: 38vh;
+     left: 11vw;
+}
+ #cB3 {
+     width: 2rem;
+     height: 2rem;
+     position: absolute;
+     top: 44vh;
+     right: 5vw;
+}
  #imgCapitolsFinal {
      height: 50%;
      width:100%;
@@ -1121,32 +1016,16 @@
      right: 2vw;
 }
  @media (min-width: 700px) {
-
-    #nen {
-        margin: 0 auto;
-        max-width: 50vw;
+     #nenInici {
+         width: 25rem;
     }
-
-    #portada h1 {
-        font-size: 6rem;
-    }
-
-    #portada h2 {
-        font-size: 3rem;
-        position: relative;
-        top: -17px;
-    }
-
-    .portada-sup .titol {
-        padding: 1rem 5rem 0;
-    }
-
      .Animalades {
          align-content: center;
          top: 10rem;
     }
      #Animalades {
          font-size: 4rem;
+         line-height: 2.8rem;
     }
      #fondoo {
          width: 100%;
@@ -1155,8 +1034,6 @@
      .nen {
          height: 83vh;
     }
-
-
      .column-row {
          align-items: center;
     }
@@ -1240,22 +1117,43 @@
          line-height: 3.8rem;
     }*/
      .bloqueAnimaladsLogo {
-         height: 21vh;
-         flex-direction: column;
+         height: 14vh;
+         flex-direction: row-reverse;
          display: flex;
-         flex-wrap: nowrap;
-         align-items: center;
+         flex-wrap: wrap;
+         align-content: flex-end;
+         align-items: flex-start;
          justify-content: space-between;
          padding-left: 3rem;
          padding-right: 3rem;
     }
-/*     .logos {
+     .scroll {
+         width: 4.5rem;
+         height: 4.5rem;
+         cursor:var(--cursorHover);
+    }
+     .logos {
          width: 27%;
          padding-bottom: 4rem;
          justify-content: space-between;
-    }*/
-
-
+    }
+     #diputacio {
+         width: 9.5rem;
+    }
+     #faro {
+         width: 5.5rem;
+    }
+     #LF {
+         width: 5.5rem;
+    }
+     #fondoo {
+         width: 100%;
+         height: 50%;
+         bottom: 1rem;
+    }
+     #nenInici {
+         bottom: 9rem;
+    }
 /*     #cB {
          width: 3rem;
          height: 3rem;
@@ -1457,7 +1355,11 @@
          height: 50%;
          bottom: 1rem;
     }
-
+     #nenInici {
+         width: 13rem;
+         right: 4rem;
+         bottom: 4rem;
+    }
      #cB {
          width: 2rem;
          height: 2rem;
