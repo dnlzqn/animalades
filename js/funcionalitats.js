@@ -6,7 +6,7 @@ let paraulesDestacades = [{
    "resposta": "Concepte matemàtic per resoldre problemes.",
 }, {
    "titol": "Entomòleg",
-   "resposta": "Persona que estudia els insctes.",
+   "resposta": "Persona que estudia els insectes.",
 }, {
    "titol": "Pintes",
    "resposta": "Expressió coloquial per referir-nos a l’aspecte d’una persona.",

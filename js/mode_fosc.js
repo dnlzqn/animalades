@@ -6,8 +6,8 @@ function modo_Oscuro() {
 
 
    if (clar) {
-      document.documentElement.style.setProperty("--colorFondoAzul", "#008ba6");
-      document.documentElement.style.setProperty("--colorFondoTaronja", "#bf7c00");
+      document.documentElement.style.setProperty("--colorFondoAzul", "#008eab");
+      document.documentElement.style.setProperty("--colorFondoTaronja", "#0a0101");
       document.documentElement.style.setProperty("--colorFondo", "#222222");
       document.documentElement.style.setProperty("--colorTexto", "#f1eff1");
       document.documentElement.style.setProperty("--cursorPuntero", "url(../img/punteroBlanco.png), auto");
@@ -17,7 +17,7 @@ function modo_Oscuro() {
       document.documentElement.style.setProperty("--cora2", "url(../img/cora2vnegro.svg)");
       document.documentElement.style.setProperty("--cora4", "url(../img/cora4vnegro.svg)");
       document.documentElement.style.setProperty("--cora5", "url(../img/cora5vnegro.svg)");
-      document.documentElement.style.setProperty("--colorFelicitats", "#f1eff1");
+      document.documentElement.style.setProperty("--colorFelicitats", "#96024b");
 
       let imagenesArticulos = document.querySelectorAll('article:not(#capitol1) img');
         imagenesArticulos.forEach(function(img) {
