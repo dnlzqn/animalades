@@ -63,6 +63,7 @@
      font-size: var(--medidaTexto-h3);
      color: var(--colorTexto);
      line-height: 1.5;
+     font-weight: 400;
 }
 
  p {
@@ -407,20 +408,7 @@
 /*     padding-left: 2.5%;
      padding-right: 2.5%;*/
 }
- .menuCapitulos {
-     width: 20rem;
-     height: 100vh;
-     position: absolute;
-     z-index: 7;
-     padding: 1rem;
-     top: 0;
-     right: -25rem;
-     position: fixed;
-     transition: 1s right;
-     background-color: var(--colorFondoTaronja);
-/*     box-shadow: 0px 0 5px var(--colorTexto);*/
-     overflow-y: auto;
-}
+
  .column-row {
      width: 100%;
      display: flex;
@@ -449,8 +437,22 @@
  .opcMenu {
      cursor: var(--cursorHover);
 }
+
+ .menuCapitulos {
+     width: 20rem;
+     height: 100vh;
+    background-color: var(--colorFondoTaronja);
+     z-index: 7;
+     padding: 1rem;
+     top: 0;
+     right: -25rem;
+     position: fixed;
+     transition: 1s right;
+     overflow-y: auto;
+}
+
  .ajustes {
-     width: 21.5rem;
+     width: 20rem;
      height: 100vh;
      background-color: var(--colorFondoTaronja);
      z-index: 7;
@@ -459,9 +461,9 @@
      right: -24rem;
      position: fixed;
      transition: 1s right;
-/*     box-shadow: 0px 0 5px var(--colorTexto);*/
      overflow-y: auto;
 }
+
  #cruz2 {
      width: 1rem;
      height: 1rem;
@@ -473,8 +475,9 @@
      cursor: var(--cursorHover);
 }
  .titulo {
+    text-align: left;
      margin-top: 3rem;
-     margin-bottom: 0;
+     margin-bottom: 0.6rem;
      font-size: var(--medidaTexto-h2);
 }
 
@@ -482,7 +485,6 @@
     margin-top: 0rem;
     margin-bottom: 1rem;
 }
-
 
  #carga {
      width: 10rem;
@@ -561,6 +563,7 @@
      align-items: center;
      font-family: 'IBM Plex Sans', sans-serif;
      display: flex;
+    margin-bottom: -9px;
 }
  #check1 {
      width: 5vw;
@@ -589,6 +592,7 @@
      align-items: center;
      font-family: 'Merriweather', serif;
      display: flex;
+     margin-bottom: -9px;
 }
  #check2 {
      width: 5vw;
@@ -636,6 +640,7 @@
      align-items: center;
      font-family: var(--estiloTexto);
      display: flex;
+     margin-bottom: -3px;
 }
  #check4 {
      width: 5vw;
@@ -714,7 +719,7 @@
      width: 50%;
 }
  .blanco {
-     margin-bottom: 0.7em;
+     margin: 0.4em 0;
      width: 1.5rem;
      height: 1.5rem;
      border-radius: 100px;
@@ -722,7 +727,7 @@
      background-color: white;
 }
  .negre {
-     margin-bottom: 0.7em;
+     margin: 0.4em 0;
      width: 1.5rem;
      height: 1.5rem;
      border-radius: 100px;
@@ -740,7 +745,7 @@
 
  #pantInici {
      width: 100%;
-     height: 100vh;
+    height: 100vh;
      height: 100dvh;
      display: flex;
      position: relative;
@@ -752,7 +757,7 @@
      width: 130rem;
      height: 55%;
      position: absolute;
-     bottom: -1rem;
+     bottom: 0rem;
      right: 0rem;
      z-index: 1;
 }
@@ -1072,14 +1077,18 @@
 
      .ajustesMenu {
          padding-right: 2rem;
-        ;
+
     }
      #logoCora {
          padding-left: 2rem;
          width: 4.5rem;
     }
+    .ajustesMenu svg {
+        width: 4.5rem;
+    }
      .opcMenu:hover {
          text-decoration: underline;
+    }
     }
      #destacadahover:hover {
          text-decoration: underline;
@@ -1097,7 +1106,7 @@
          padding-bottom: 3rem;
          column-gap: 4rem;
     }
-     .Animalades {
+/*     .Animalades {
          top: 19rem;
          display: flex;
          left: 10vw;
@@ -1106,7 +1115,7 @@
      #Animalades {
          font-size:6rem;
          line-height: 3.8rem;
-    }
+    }*/
      .bloqueAnimaladsLogo {
          height: 14vh;
          flex-direction: row-reverse;
@@ -1143,11 +1152,9 @@
          bottom: 1rem;
     }
      #nenInici {
-         width: 36rem;
-         right: 8rem;
          bottom: 9rem;
     }
-     #cB {
+/*     #cB {
          width: 3rem;
          height: 3rem;
          top: 61vh;
@@ -1164,7 +1171,7 @@
          height: 3rem;
          top: 44vh;
          right: 44vw;
-    }
+    }*/
      #destacadahover {
          cursor:var(--cursorHover);
     }
