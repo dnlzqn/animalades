@@ -9,7 +9,7 @@ function modo_Oscuro() {
       document.documentElement.style.setProperty("--colorFondoAzul", "#008eab");
       document.documentElement.style.setProperty("--colorFondoTaronja", "#0a0101");
       document.documentElement.style.setProperty("--colorFondo", "#222222");
-      document.documentElement.style.setProperty("--colorTexto", "#f1eff1");
+      document.documentElement.style.setProperty("--colorTexto", "#c6c6c6");
       document.documentElement.style.setProperty("--cursorPuntero", "url(../img/punteroBlanco.png), auto");
       document.documentElement.style.setProperty("--cursorHover", "url(../img/hoverBlanco.png), auto");
       document.documentElement.style.setProperty("--imgCruz", "url(../img/cruzBlanca.png)");
@@ -32,7 +32,7 @@ function modo_Oscuro() {
       document.documentElement.style.setProperty("--colorFondoAzul", "#70C7E0");
       document.documentElement.style.setProperty("--colorFondoTaronja", "#e49a0e");
       document.documentElement.style.setProperty("--colorFondo", "#F4F4F4");
-      document.documentElement.style.setProperty("--colorTexto", "#000000");
+      document.documentElement.style.setProperty("--colorTexto", "#222222");
       document.documentElement.style.setProperty("--cursorPuntero", "url(../img/punteroNegro.png), auto");
       document.documentElement.style.setProperty("--cursorHover", "url(../img/hoverNegro.png), auto");
       document.documentElement.style.setProperty("--imgCruz", "url(../img/cruz.png)");

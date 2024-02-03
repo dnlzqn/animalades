@@ -2,7 +2,7 @@
     --colorFondo: #F4F4F4;
     --colorFondoAzul: #70C7E0;
     --colorFondoTaronja: #e49a0e;
-    --colorTexto: #303030;
+    --colorTexto: #222222;
     --colorBorde: #000000;
     --estiloTexto: 'IBM Plex Sans', sans-serif;
     --medidaTexto-h2: 20px;
@@ -298,6 +298,10 @@ p a {
 #logoCora {
     width: 1.8rem;
     height: 2rem;
+    cursor: var(--cursorHover);
+}
+
+#destacadahover {
     cursor: var(--cursorHover);
 }
 
@@ -631,8 +635,8 @@ h2 {
     width: 1.5rem;
     height: 1.5rem;
     border-radius: 100px;
-    border: 2px solid #000000;
-    background-color: white;
+    border: 2px solid #0a0101;
+    background-color: #F4F4F4;
 }
 
 .negre {
@@ -640,8 +644,8 @@ h2 {
     width: 1.5rem;
     height: 1.5rem;
     border-radius: 100px;
-    background-color: black;
-    border: 2px solid #FFFFFF;
+    background-color: #0a0101;
+    border: 2px solid #F4F4F4;
 }
 
 .bloqueApartadosAjustes {
@@ -712,7 +716,7 @@ h2 {
 #textDestacat {
     padding-left: 2rem;
     padding-right: 2rem;
-    color: black;
+    color: var(--colorTexto);
 }
 
 #corazon {
