@@ -296,9 +296,25 @@ p a {
 }
 
 #logoCora {
-    width: 1.8rem;
+    width: 14rem;
+    position: relative;
     height: 2rem;
     cursor: var(--cursorHover);
+    top: -3px;
+}
+
+#logoCora path:nth-of-type(-n+1) {
+    display: none;
+}
+
+@media screen and (min-width: 767px) {
+    #logoCora {
+        width: 10rem;
+    }
+    /* Selecciona los primeros 9 path y los oculta */
+    #logoCora path:nth-of-type(-n+9) {
+        display: block;
+    }
 }
 
 #destacadahover {
@@ -307,7 +323,7 @@ p a {
 
 .ajustesMenu svg {
     height: 2rem;
-    width: 4rem;
+    width: 1.5rem;
     cursor: pointer;
 }
 
