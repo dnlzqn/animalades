@@ -208,22 +208,6 @@ p a {
     column-gap: 2rem;
 }
 
-/* .barraSuperior {
-     width: 100%;
-     height: 2rem;
-     padding: 2rem 1.3rem;
-     display: flex;
-     align-items: center;
-     column-gap: 2vw;
-     justify-content: space-between;
-     position: fixed;
-     top: 0;
-     z-index: 6;
-     background-image: url('../img/fonss.svg');
-     background-size: 100% 100%;
-     background-repeat: no-repeat;
-}*/
-
 .barraSuperior {
     position: relative;
     width: 100%;
@@ -250,6 +234,18 @@ p a {
     flex-direction: column;
     z-index: 2;
     background-color: var(--colorFondo);
+}
+
+.break::after {
+    content: "\A"; /* Representa un salto de línea en CSS */
+    white-space: normal /* Define el espacio en blanco como pre-formateado */
+}
+
+@media screen and (max-width: 380px) {
+    .break::after {
+        content: "\A"; /* Representa un salto de línea en CSS */
+        white-space: pre /* Define el espacio en blanco como pre-formateado */
+    }
 }
 
 #imgCapitols {
@@ -640,6 +636,10 @@ h2 {
     align-items: center;
     justify-content: center;
 }
+.maquetacionFinal p {
+    text-align: center;
+}
+
 
 .imgClaroOscuro {
     width: 3rem;
@@ -792,7 +792,7 @@ h2 {
 }
 
 #Felicitats2 {
-    font-size: calc(var(--medidaTexto-h2)*1.3);
+    font-size: calc(var(--medidaTexto-h2));
     color: var(--colorTexto);
     margin-top: 0;
     font-weight: 600;
@@ -828,7 +828,7 @@ h2 {
     background-repeat: no-repeat;
     background-size: contain;
     position: absolute;
-    top: 31vh;
+    top: 61vh;
     left: 6vw;
 }
 
