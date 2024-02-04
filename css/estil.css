@@ -328,7 +328,7 @@ p a {
     display: flex;
     column-gap: 2rem;
     justify-content: flex-end;
-    padding-right: 1vw;
+    padding-right: 0;
     align-items: center;
 }
 
@@ -949,7 +949,7 @@ h2 {
     }
 
 
-    .ajustesMenu {
+/*    .ajustesMenu {
         padding-right: 2rem;
 
     }
@@ -961,7 +961,7 @@ h2 {
 
     .ajustesMenu svg {
         width: 4.5rem;
-    }
+    }*/
 
     .opcMenu:hover {
         text-decoration: underline;
