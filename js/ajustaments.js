@@ -2,19 +2,16 @@ const ajustes = document.querySelector('.ajustes');
 const ajustesButton = document.getElementById('ajustes');
 const cruz2Button = document.getElementById('cruz2');
 
-//ajustes.style.right = '-24rem';
-let ajustesAbierto = false;
+ajustes.style.right = '-24rem';
 
 // Abre ajustes cuando se hace clic en el botón de ajustes
 ajustesButton.addEventListener('click', () => {
    ajustes.style.right = '0rem';
-   ajustesAbierto = true;
 });
 
 // Cierra ajustes cuando se hace clic en el botón de cruz2
 cruz2Button.addEventListener('click', () => {
    ajustes.style.right = '-24rem';
-   ajustesAbierto = false;
 });
 
 
