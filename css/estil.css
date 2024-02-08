@@ -1085,6 +1085,28 @@ h2 {
     }
 }
 
+@media (min-height: 680px) {
+	#nen {
+	    top: -3rem;
+	}
+
+	.portada-sup .titol {
+	    top: 55vh;
+	}
+
+	#portada h1 {
+	    font-size: 6rem;
+	}
+
+	#portada h2 {
+	    font-size: 4rem;
+	}
+
+	.btn {
+		bottom: 25vh;
+	    left: 13rem;
+	}
+}
 
 @media only screen and (max-height: 575.98px) and (orientation: landscape) {
 
