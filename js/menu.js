@@ -29,7 +29,7 @@ function mostrar(numCap) {
    });
 
    // Permitir el scroll al cerrar el menú
-   document.body.style.overflow = "auto";
+   //document.body.style.overflow = "auto";
 }
 
 // Abre el menú cuando se hace clic en el botón de menú
