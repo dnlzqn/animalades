@@ -525,6 +525,22 @@ p a {
     top: -3px;
 }
 
+@keyframes changeColor {
+  0% {
+    fill: #C80162; /* Color inicial: rojo */
+  }
+  50% {
+    fill: #FF3e9e; /* Color intermedio: tono de rosa */
+  }
+  100% {
+    fill: #C80162; /* Color final: rojo, mismo que el inicial */
+  }
+}
+
+.color-path {
+  animation: changeColor 4s infinite; /* La animación dura 2 segundos y se repite infinitamente */
+}
+
 #logoCora path:nth-of-type(-n+1) {
     display: none;
 }
