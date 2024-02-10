@@ -78,22 +78,6 @@ p a {
     margin-bottom: 3rem;
 }
 
-.btn {
-    font-family: var(--estiloTexto);
-    font-size: var(--medidaTexto-h2);
-    position: absolute;
-    bottom: 15vh;
-    z-index: 1;
-    border: none;
-    color: var(--colorTexto);
-    padding: 14px 28px;
-    cursor: pointer;
-    border-radius: 50px;
-    background-color: var(--colorFondoTaronja);
-    font-weight: 600;
-}
-
-
 #portada .portada-sup {
     width: 100vw;
     display: flex;
@@ -226,6 +210,248 @@ p a {
     flex-direction: row;
     justify-content: space-between;
 }
+
+
+
+.btn {
+    font-family: var(--estiloTexto);
+    font-size: var(--medidaTexto-h2);
+    position: absolute;
+    bottom: 1vh;
+    z-index: 1;
+    border: none;
+    color: var(--colorTexto);
+    padding: 14px 28px;
+    cursor: pointer;
+    border-radius: 50px;
+    background-color: var(--colorFondoTaronja);
+    font-weight: 600;
+}
+
+
+/* Móvil pequeño: 360 x 640 px */
+/*@media only screen and (min-width: 360px) and (min-height: 640px) {*/
+@media only screen and (min-width: 320px) {
+
+    .btn {
+        bottom: 1vh;
+    }
+}
+
+/* Móvil medio: 375 x 667 px */
+/*@media only screen and (min-width: 375px) and (min-height: 667px) {*/
+@media only screen and (min-width: 375px) {
+      .btn {
+        bottom: 2vh;
+    }
+}
+
+/* iPhone 12 Pro */
+@media only screen and (min-width: 390px) {
+  /* Estilos específicos para el iPhone 12 Pro */
+    .portada-sup .titol {
+        position: relative;
+        top: -10vh;
+    }
+
+}
+
+
+/* Smartphone grande: 720 x 1280 px */
+/*@media only screen and (min-width: 720px) and (min-height: 1280px) {*/
+@media only screen and (min-width: 768px) {
+    #nen {
+        top: -3rem;
+        max-width: 42vw;
+    }
+
+    .portada-sup .titol {
+        position: relative;
+        top: -1vh;
+    }
+
+    #portada h1 {
+        font-size: 6rem;
+    }
+
+    #portada h2 {
+        font-size: 4rem;
+    }
+
+    .btn {
+        bottom: 10vh;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    #nen {
+        position: relative;
+        top: -3rem;
+        left: 18vw;
+        max-width: 39vw;
+    }
+
+    .portada-sup .titol {
+        position: relative;
+        top: 38vh;
+    }
+
+    #portada h1 {
+        font-size: 4.5rem;
+    }
+
+    #portada h2 {
+        font-size: 3.5rem;
+    }
+
+    .btn {
+        bottom: 10vh;
+    }
+
+    #cB {
+        top: -6%;
+        left: 54%;
+    }
+
+    #cB2 {
+        left: 46%;
+    }
+
+    #cB3 {
+        top: 30%;
+        right: 10%;
+    }
+}
+
+@media only screen and (min-width: 1280px) {
+  /* Estilos para ordenador portátil mediano y de escritorio pequeño */
+    #nen {
+        max-width: 31vw;
+    }
+
+    .portada-sup .titol {
+        position: relative;
+        top: 41vh;
+        left: 6vw;
+    }
+
+    #portada h1 {
+        font-size: 5rem;
+    }
+
+    #portada h2 {
+        font-size: 4rem;
+    }
+
+    .portada_logos {
+        width:68%;
+    }
+}
+
+/* Ordenador portátil medio: 1366 x 768 px */
+/*@media only screen and (min-width: 1366px) and (min-height: 768px) {*/
+
+@media only screen and (min-width: 1366px) {
+    #nen {
+        margin: 0 auto;
+        max-width: 50vw;
+        position: relative;
+        right: -17rem;
+        top: -3rem;
+    }
+
+    .portada-sup .titol {
+        position: relative;
+        top: 45vh;
+        left: 10%;
+    }
+
+    #portada h1 {
+        font-size: 6rem;
+    }
+
+    #portada h2 {
+        font-size: 4rem;
+    }
+
+    .btn {
+        bottom: 16vh;
+    }
+
+    .portada_logos {
+        width:68%;
+    }
+}
+
+/* Ordenador de escritorio medio: 1440 x 900 px */
+/*@media only screen and (min-width: 1440px) and (min-height: 900px) {*/
+@media only screen and (min-width: 1440px) {
+    .portada-sup .titol {
+        top: 35vh;
+        left: 50px;
+    }
+
+    .btn {
+        bottom: 24vh;
+        left: 14rem;
+    }
+
+    #cB {
+        top: -18%;
+        left: 54%;
+    }
+
+    #cB2 {
+        left: 46%;
+    }
+
+    #cB3 {
+        top: 30%;
+        right: 10%;
+    }
+
+    .portada_logos {
+        width: 50%;
+        bottom: -54px;
+    }
+
+    #nen {
+        top: -7rem;
+    }
+
+
+    #portada h1 {
+        font-size: 6.5rem;
+    }
+
+    #portada h2 {
+        font-size: 4.5rem;
+        position: relative;
+        top: -17px;
+    }
+}
+
+/* PC de escritorio grande: 1920 x 1080 px */
+/*@media only screen and (min-width: 1920px) and (min-height: 1080px) {*/
+@media only screen and (min-width: 1920px) {
+      .portada-sup .titol {
+        top: 30vh;
+    }
+
+    #nen {
+        width: 31vw;
+    }
+
+
+    #portada h1 {
+        font-size: 8rem;
+    }
+
+    #portada h2 {
+        font-size: 5rem;
+    }
+}
+
 
 
 #capitols {
@@ -478,6 +704,7 @@ p a {
 .parrafos {
     width: 100%;
     padding: 0 3%;
+    text-wrap: pretty;
 }
 
 .parrafos h2 {
@@ -889,55 +1116,6 @@ h2 {
         margin: unset;
     }
 
-    .btn {
-        bottom: 28vh;
-        left: 14rem;
-    }
-
-    #cB {
-        top: -18%;
-        left: 54%;
-    }
-
-    #cB2 {
-        left: 46%;
-    }
-
-    #cB3 {
-        top: 30%;
-        right: 10%;
-    }
-
-    .portada_logos {
-        width: 50%;
-        bottom: -54px;
-    }
-
-    #nen {
-        margin: 0 auto;
-        max-width: 50vw;
-        position: relative;
-        right: -17rem;
-        top: -7rem;
-    }
-
-
-    #portada h1 {
-        font-size: 8rem;
-    }
-
-    #portada h2 {
-        font-size: 5rem;
-        position: relative;
-        top: -17px;
-    }
-
-    .portada-sup .titol {
-        margin: 17rem 5rem 0;
-        position: relative;
-        top: 30vh;
-    }
-
     #imgCapitols {
         height: 50%;
         margin-top: 0px;
@@ -947,21 +1125,6 @@ h2 {
     .parrafos p:first-child {
         margin-top: 0;
     }
-
-
-/*    .ajustesMenu {
-        padding-right: 2rem;
-
-    }
-
-    #logoCora {
-        padding-left: 2rem;
-        width: 4.5rem;
-    }
-
-    .ajustesMenu svg {
-        width: 4.5rem;
-    }*/
 
     .opcMenu:hover {
         text-decoration: underline;
@@ -1086,26 +1249,7 @@ h2 {
 }
 
 @media (min-height: 680px) {
-	#nen {
-	    top: -3rem;
-	}
 
-	.portada-sup .titol {
-	    top: 55vh;
-	}
-
-	#portada h1 {
-	    font-size: 6rem;
-	}
-
-	#portada h2 {
-	    font-size: 4rem;
-	}
-
-	.btn {
-		bottom: 25vh;
-	    left: 13rem;
-	}
 }
 
 @media only screen and (max-height: 575.98px) and (orientation: landscape) {

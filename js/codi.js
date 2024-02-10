@@ -1,138 +1,3 @@
-
-
-
-
-
-let tlletres = gsap.timeline({
-    onComplete: function() {
-//   Esta función se ejecutará cuando la animación haya terminado
-//     Puedes ocultar o quitar el elemento aquí
-        document.querySelector(".pantCarga").style.display = "none";
-    }
-});
-
-tlletres.from(".pantCarga", {
-   top: '0vh',
-    duration: 3,
-}, 4);
-tlletres.from(".barraSuperior", {
-   
-    top:'-10vh',
-    duration: 2,
-    
-    },6);
-tlletres.from("#fondoBarra", {
-    
-    top:'-10vh',
-    duration: 2,
-    
-    },6);
-
-tlletres.from(".Animalades", {
-    
-    left:'-100vw',
-    duration: 2,
-  
-    
-    },7);
-
-tlletres.from(".bloqueAnimaladsLogo", {
-    
-    bottom:'-30vh',
-    duration: 2,
-    
-    
-    },7);
-tlletres.from("#fondoo", {
-    
-    bottom:'-30vh',
-    duration: 2,
-    
-    
-    },7);
-tlletres.from("#nenInici", {
-    
-    bottom:'-30vh',
-    duration: 2,
-    opacity:0
-   
-    
-    },7);
-
-tlletres.from("#cB", {
-    
-scaleX:-1,
-    duration: 2,
-    opacity:0
-   
-    
-    },8);
-tlletres.from("#cB2", {
-    
-scaleX:-1,
-    duration: 2,
-    opacity:0
-   
-    
-    },9);
-tlletres.from("#cB3", {
-    
-scaleX:-1,
-    duration: 2,
-    opacity:0
-    
-   
-    
-    },10);
-
-
-
-
-
-
-
-
-gsap.registerPlugin(ScrollTrigger);
-
-const Animalades = document.querySelector('.Animalades');
-const cB = document.querySelector('#cB');
-const cB2 = document.querySelector('#cB2');
-const cB3 = document.querySelector('#cB3');
-const nenInici = document.querySelector('#nenInici');
-
-
-
-
-const tl = gsap.timeline({
-    scrollTrigger: {
-        trigger: '.pantInici',
-        markers:false,
-        start: 'top top',
-        end: '50% 100%',
-        scrub: true,
-        pin: true,
-    },
-});
-
-tl.to(Animalades, { y: '35vh', duration: 5000, opacity:0  },1)
-tl.to(cB, { y: '30vh',duration: 5000, scaleX:-1  },1)
-tl.to(cB2, { y: '30vh', duration: 5000, scaleX:-1  },1)
-tl.to(cB3, {  y: '30vh',duration: 5000, scaleX:-1  },1)
-tl.to(nenInici, { opacity:0 ,duration: 5000 },1)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // Aquí se declaran como constantes (const) estos tres elementos de vuestro html
 const menuCapitulos = document.querySelector('.menuCapitulos');
 const capitulos = document.querySelectorAll('.capitols');
@@ -263,112 +128,101 @@ document.addEventListener('click', (event) => {
 });
 
 
-
-
 ///////////////////////////////////////////////////////
 let clar = true; // Variable para controlar el estado claro/oscuro
 
 function modo_Oscuro() {
-    const elemento = document.getElementById("IMGclaroActivado");
+   const elemento = document.getElementById("IMGclaroActivado");
 
 
+   if (clar) {
+      document.documentElement.style.setProperty("--colorFondoAzul", "#008eab");
+      document.documentElement.style.setProperty("--colorFondoTaronja", "#0a0101");
+      document.documentElement.style.setProperty("--colorFondo", "#222222");
+      document.documentElement.style.setProperty("--colorTexto", "#d4d4d4");
+      document.documentElement.style.setProperty("--cursorPuntero", "url(../img/punteroBlanco.png), auto");
+      document.documentElement.style.setProperty("--cursorHover", "url(../img/hoverBlanco.png), auto");
+      document.documentElement.style.setProperty("--imgCruz", "url(../img/cruzBlanca.png)");
+      document.documentElement.style.setProperty("--cora1", "url(../img/cora1vnegro.svg)");
+      document.documentElement.style.setProperty("--cora2", "url(../img/cora2vnegro.svg)");
+      document.documentElement.style.setProperty("--cora4", "url(../img/cora4vnegro.svg)");
+      document.documentElement.style.setProperty("--cora5", "url(../img/cora5vnegro.svg)");
+      document.documentElement.style.setProperty("--colorFelicitats", "#96024b");
 
-    if (clar) {
-        document.documentElement.style.setProperty("--colorFondoAzul", "#3CA3B7");
-        document.documentElement.style.setProperty("--colorFondo", "#111111");
-        document.documentElement.style.setProperty("--colorTexto", "#FFFFFF");
-        document.documentElement.style.setProperty("--cursorPuntero", "url(../img/punteroBlanco.png), auto");
-        document.documentElement.style.setProperty("--cursorHover", "url(../img/hoverBlanco.png), auto");
-        document.documentElement.style.setProperty("--imgCruz", "url(../img/cruzBlanca.png)");
-        document.documentElement.style.setProperty("--cora1", "url(../img/cora1vnegro.svg)");
-        document.documentElement.style.setProperty("--cora2", "url(../img/cora2vnegro.svg)");
-        document.documentElement.style.setProperty("--cora4", "url(../img/cora4vnegro.svg)");
-        document.documentElement.style.setProperty("--cora5", "url(../img/cora5vnegro.svg)");
-        document.documentElement.style.setProperty("--colorFelicitats", "#FFFFFF");
-
-
-
-
-
-        clar = false;
-        elemento.src = "img/oscuroActivado.svg"; // Cambiar a imagen de modo oscuro
-
-    } else {
-        document.documentElement.style.setProperty("--colorFondoAzul", "#70C7E0");
-        document.documentElement.style.setProperty("--colorFondo", "#F4F4F4");
-        document.documentElement.style.setProperty("--colorTexto", "#000000");
-        document.documentElement.style.setProperty("--cursorPuntero", "url(../img/punteroNegro.png), auto");
-        document.documentElement.style.setProperty("--cursorHover", "url(../img/hoverNegro.png), auto");
-        document.documentElement.style.setProperty("--imgCruz", "url(../img/cruz.png)");
-        document.documentElement.style.setProperty("--cora1", "url(../img/cora1.svg)");
-        document.documentElement.style.setProperty("--cora2", "url(../img/cora2.svg)");
-        document.documentElement.style.setProperty("--cora4", "url(../img/cora4.svg)");
-        document.documentElement.style.setProperty("--cora5", "url(../img/cora5.svg)");
-        document.documentElement.style.setProperty("--colorFelicitats", "#C80062");
+      let imagenesArticulos = document.querySelectorAll('article:not(#capitol1) img');
+        imagenesArticulos.forEach(function(img) {
+            img.style.opacity = "0.6";
+        });
 
 
+      clar = false;
+      elemento.src = "img/oscuroActivado.svg"; // Cambiar a imagen de modo oscuro
 
+   } else {
+      document.documentElement.style.setProperty("--colorFondoAzul", "#70C7E0");
+      document.documentElement.style.setProperty("--colorFondoTaronja", "#e49a0e");
+      document.documentElement.style.setProperty("--colorFondo", "#F4F4F4");
+      document.documentElement.style.setProperty("--colorTexto", "#222222");
+      document.documentElement.style.setProperty("--cursorPuntero", "url(../img/punteroNegro.png), auto");
+      document.documentElement.style.setProperty("--cursorHover", "url(../img/hoverNegro.png), auto");
+      document.documentElement.style.setProperty("--imgCruz", "url(../img/cruz.png)");
+      document.documentElement.style.setProperty("--cora1", "url(../img/cora1.svg)");
+      document.documentElement.style.setProperty("--cora2", "url(../img/cora2.svg)");
+      document.documentElement.style.setProperty("--cora4", "url(../img/cora4.svg)");
+      document.documentElement.style.setProperty("--cora5", "url(../img/cora5.svg)");
+      document.documentElement.style.setProperty("--colorFelicitats", "#C80062");
 
-        clar = true;
-        elemento.src = "img/claroActivado.svg"; // Cambiar a imagen de modo claro
+      let imagenesArticulos = document.querySelectorAll('article:not(#capitol1) img');
+        imagenesArticulos.forEach(function(img) {
+            img.style.opacity = "1"; // Restaurar la opacidad a 1 (completamente visible)
+        });
 
-    }
+      clar = true;
+      elemento.src = "img/claroActivado.svg"; // Cambiar a imagen de modo claro
+
+   }
 }
+
 
 ///////////////////////////////////////////////////////
 function Estilo_Tipo() {
-    const elemento = document.getElementById("IMGestiloActivado");
+   const elemento = document.getElementById("IMGestiloActivado");
 
+   if (clar) {
 
+      document.documentElement.style.setProperty("--estiloTexto", 'IBM Plex Serif, serif');
 
-    if (clar) {
+      clar = false;
+      elemento.src = "img/sinestiloActivado.svg"; // Cambiar a imagen de modo oscuro
+   } else {
 
-        document.documentElement.style.setProperty("--estiloTexto", 'Merriweather, serif');
+      document.documentElement.style.setProperty("--estiloTexto", 'IBM Plex Sans, sans-serif');
 
-
-
-        clar = false;
-        elemento.src = "img/sinestiloActivado.svg"; // Cambiar a imagen de modo oscuro
-    } else {
-
-        document.documentElement.style.setProperty("--estiloTexto", 'IBM Plex Sans, sans-serif');
-
-
-        clar = true;
-        elemento.src = "img/estiloActivado.svg"; // Cambiar a imagen de modo claro
-    }
+      clar = true;
+      elemento.src = "img/estiloActivado.svg"; // Cambiar a imagen de modo claro
+   }
 }
 
 function Medida_Tipo() {
-    const elemento = document.getElementById("IMGpequeActivado");
+   const elemento = document.getElementById("IMGpequeActivado");
 
+   if (clar) {
+      document.documentElement.style.setProperty("--medidaTexto-h2", "24px");
+      document.documentElement.style.setProperty("--medidaTexto-h3", "20px");
+      document.documentElement.style.setProperty("--medidaTexto-p", "19px");
+      document.documentElement.style.setProperty("--column-gap", " 2rem");
 
+      clar = false;
+      elemento.src = "img/grandeActivado.svg"; // Cambiar a imagen de modo oscuro
+   } else {
+      document.documentElement.style.setProperty("--medidaTexto-h2", " 20px");
+      document.documentElement.style.setProperty("--medidaTexto-h3", " 18px");
+      document.documentElement.style.setProperty("--medidaTexto-p", " 16px");
+      document.documentElement.style.setProperty("--column-gap", " 0.6rem");
 
-    if (clar) {
-        document.documentElement.style.setProperty("--medidaTexto-p", " 16px");
-        document.documentElement.style.setProperty("--medidaTexto-p", " 20px");
-        document.documentElement.style.setProperty("--medidaTexto-h2", " 20px");
-        document.documentElement.style.setProperty("--medidaTexto-h2", " 24px");
-        document.documentElement.style.setProperty("--medidaTexto-h3", " 18px");
-        document.documentElement.style.setProperty("--medidaTexto-h3", " 22px");
-        document.documentElement.style.setProperty("--column-gap", " 0.6rem");
-
-
-        clar = false;
-        elemento.src = "img/grandeActivado.svg"; // Cambiar a imagen de modo oscuro
-    } else {
-        document.documentElement.style.setProperty("--medidaTexto-p", "20px");
-        document.documentElement.style.setProperty("--medidaTexto-p", "16px");
-        document.documentElement.style.setProperty("--medidaTexto-h2", "24px");
-        document.documentElement.style.setProperty("--medidaTexto-h2", "20px");
-        document.documentElement.style.setProperty("--medidaTexto-h3", "22px");
-        document.documentElement.style.setProperty("--medidaTexto-h3", "18px");
-        document.documentElement.style.setProperty("--column-gap", " 2rem");
-
-
-        clar = true;
-        elemento.src = "img/pequeActivado.svg"; // Cambiar a imagen de modo claro
-    }
+      clar = true;
+      elemento.src = "img/pequeActivado.svg"; // Cambiar a imagen de modo claro
+   }
 }
 
 //function Estilo_Tipo() {
@@ -482,36 +336,3 @@ document.addEventListener("DOMContentLoaded", function () {
         c1scrollElement.scrollIntoView({ behavior: "smooth" });
     });
 });
-
-
-gsap.to(".cora1", {
-    duration: 3,
-    scale:0.5,
-    repeat: -1,
-    yoyo: true,
-});
-gsap.to(".cora2", {
-    duration: 3,
-    scale:0.5,
-    repeat: -1,
-    yoyo: true,
-},2);
-
-gsap.to(".cora3", {
-    duration: 3,
-    scale:0.5,
-    repeat: -1,
-    yoyo: true,
-},4);
-gsap.to(".cora4", {
-    duration: 3,
-    scale:0.5,
-    repeat: -1,
-    yoyo: true,
-},1);
-gsap.to(".cora5", {
-    duration: 3,
-    scale:0.5,
-    repeat: -1,
-    yoyo: true,
-},3);
